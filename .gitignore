@@ -13,3 +13,5 @@ tmp/
 /data/*.pdf
 /data/*.csv
 !/data/coordinates.csv
+!/data/coordinates_estimated.csv
+/data/processed/geocode_candidates.json

@@ -15,7 +15,7 @@ const navigation = [
 ];
 const pageContent: Record<string, { title: string; description: string; kicker: string }> = {
   overview: { title: '대구 하수처리시설의 숨은 탄소격차', description: '공공데이터로 읽는 수질 정화 성능, 에너지 효율, 그리고 전력 간접배출의 관계.', kicker: '01 / RESEARCH OVERVIEW' },
-  map: { title: '시설의 위치와 운영의 맥락', description: '검증된 좌표와 실제 운영 지표를 연결합니다. 확인되지 않은 위치는 지도에 표시하지 않습니다.', kicker: '02 / FACILITY ATLAS' },
+  map: { title: '시설의 위치와 운영의 맥락', description: '공개 주소를 행정구역·동·도로 대표점에 연결한 추정 지도를 실제 운영 지표와 함께 읽습니다. 점은 시설 부지 좌표가 아닙니다.', kicker: '02 / FACILITY ATLAS' },
   benchmark: { title: '에너지 효율, 비교의 조건을 묻다', description: '시설 규모·처리공법·오염부하를 함께 고려해 전국 유사시설과 대구를 비교합니다.', kicker: '03 / ENERGY BENCHMARK' },
   ai: { title: '모델이 설명하는 에너지의 차이', description: '대구를 학습에서 제외한 독립 평가. XGBoost 예측과 SHAP 기여도, 기준모델과의 성능 차이를 공개합니다.', kicker: '04 / XGBOOST & SHAP' },
   carbon: { title: '전력 절감에서 탄소 시나리오까지', description: '2025년 전력사용량에 가정 절감률을 적용합니다. 실증된 감축 효과와 구분해 살펴보세요.', kicker: '05 / CARBON SCENARIOS' },

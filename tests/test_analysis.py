@@ -237,9 +237,23 @@ def test_trends_only_verified_identical_facilities(result):
         assert trend['electricity_previous']==pytest.approx(r.electricity_kwh)
 
 
-def test_missing_coordinates_not_fabricated(result):
-    coords=pd.read_csv(ROOT/'data/coordinates.csv')
-    assert len(coords)==len(result['coordinates'])
+def test_estimated_coordinates_are_labeled_and_traceable(result):
+    verified=pd.read_csv(ROOT/'data/coordinates.csv')
+    estimated=pd.read_csv(ROOT/'data/coordinates_estimated.csv')
+    assert len(result['coordinates'])==len(verified)+len(estimated)
+    assert result['quality']['coordinates_verified_n']==len(verified)
+    assert result['quality']['coordinates_estimated_n']==len(estimated)
+    by_id={row['facility_id']:row for row in result['coordinates']}
+    for row in estimated.itertuples():
+        displayed=by_id[row.facility_id]
+        assert displayed['status']=='estimated'
+        assert displayed['basis']==row.basis
+        assert displayed['area_name']==row.area_name
+        assert displayed['source_url']==row.source_url
+        assert displayed['source_address']==row.source_address
+        assert displayed['latitude']==pytest.approx(row.latitude)
+        assert displayed['longitude']==pytest.approx(row.longitude)
+        assert displayed['attribution']
     geo=json.loads((ROOT/'data/processed/facilities.geojson').read_text(encoding='utf-8'))
     assert len(geo['features'])==len(result['coordinates'])
 

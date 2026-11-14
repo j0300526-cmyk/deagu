@@ -61,13 +61,34 @@ def supplementary(year):
 
 
 def coordinates(d):
-    coords = pd.read_csv(ROOT / 'data/coordinates.csv', dtype={'facility_id': str})
+    verified = pd.read_csv(ROOT / 'data/coordinates.csv', dtype={'facility_id': str})
+    estimated = pd.read_csv(ROOT / 'data/coordinates_estimated.csv', dtype={'facility_id': str})
+    if verified.facility_id.duplicated().any() or estimated.facility_id.duplicated().any():
+        raise ValueError('시설별 좌표 중복')
+    verified = verified.loc[verified.verified.astype(str).str.lower().eq('true')].copy()
+    verified['status'] = 'verified'
+    verified['basis'] = '공식 시설 좌표'
+    estimated = estimated.loc[estimated.status.eq('estimated')].copy()
+    if len(estimated):
+        actual = d.set_index('facility_id')
+        if not estimated.facility_id.isin(actual.index).all():
+            raise ValueError('추정 좌표에 알 수 없는 시설 ID가 있음')
+        for row in estimated.itertuples():
+            source = actual.loc[row.facility_id]
+            if row.facility_name != source['name'] or row.source_address != source['address']:
+                raise ValueError(f'추정 좌표의 시설명·주소가 분석 원본과 다름: {row.facility_id}')
+    estimated = estimated.loc[~estimated.facility_id.isin(verified.facility_id)].copy()
+    cols = ['facility_id', 'latitude', 'longitude', 'status', 'basis', 'area_name',
+            'source_address', 'source_url', 'reference_year', 'attribution', 'note']
+    parts = [frame.reindex(columns=cols) for frame in (verified, estimated) if len(frame)]
+    coords = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=cols)
     if len(coords):
-        coords = coords.loc[coords.verified.astype(str).str.lower().eq('true') & coords.source_url.fillna('').str.startswith('https://')].copy()
-        if coords.facility_id.duplicated().any(): raise ValueError('시설별 좌표 중복')
         coords.latitude = pd.to_numeric(coords.latitude, errors='coerce')
         coords.longitude = pd.to_numeric(coords.longitude, errors='coerce')
-        coords = coords.loc[coords.latitude.between(33, 39) & coords.longitude.between(124, 132) & coords.facility_id.isin(d.facility_id)]
+        if not (coords.latitude.between(35.5, 36.5) & coords.longitude.between(128.1, 128.9)
+                & coords.source_url.fillna('').str.startswith('https://')
+                & coords.facility_id.isin(d.facility_id)).all():
+            raise ValueError('지도 좌표 범위·출처·시설 ID 검증 실패')
     if len(coords):
         g = gpd.GeoDataFrame(coords, geometry=gpd.points_from_xy(coords.longitude, coords.latitude), crs='EPSG:4326')
         geo = json.loads(g.to_json())
@@ -75,7 +96,7 @@ def coordinates(d):
         g = gpd.GeoDataFrame({'facility_id': []}, geometry=[], crs='EPSG:4326')
         geo = json.loads(g.to_json())
     save_json(PROCESSED / 'facilities.geojson', geo)
-    return coords.drop(columns=['verified'], errors='ignore').to_dict('records')
+    return coords.to_dict('records')
 
 
 def run():
@@ -157,6 +178,8 @@ def run():
                'units_verified': True, 'previous_year_rows': len(prev),
                'previous_year_note': '2024 XLSX 개별행 중 소재지가 있는 4,468행. 공표 합계 4,469개소와 1개 차이가 있어 전국 증감률은 산출하지 않음.'}
     coords = coordinates(dg); quality['coordinates_n'] = len(coords)
+    quality['coordinates_verified_n'] = sum(c['status'] == 'verified' for c in coords)
+    quality['coordinates_estimated_n'] = sum(c['status'] == 'estimated' for c in coords)
     save_json(PROCESSED / 'data_quality.json', quality)
     for name, frame in [('national_2025', d), ('daegu_2025', dg), ('national_2024', prev)]:
         export = frame.copy(); export['flags'] = export['flags'].map(lambda x: '; '.join(x))

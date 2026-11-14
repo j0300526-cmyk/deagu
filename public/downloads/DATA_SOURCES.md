@@ -10,7 +10,8 @@
 | [GIR 2025 승인 계수](https://www.gir.go.kr/home/board/read.do?boardMasterId=2&boardId=86&menuId=36) | 2025-12-18 공표 / 2021–2023 평균 | 소비단 0.4330 tCO₂eq/MWh. 2023 단년도 0.4173과 구분 | 공식 공표 수치 인용; PDF 별도 개방 라이선스 미확인 |
 | [GIR 2024 승인 계수](https://www.gir.go.kr/home/board/read.do?boardMasterId=2&boardId=82&menuId=36) | 2025-03-31 공표 / 2020–2022 평균 | 2024 CSV의 참고 환산량 0.4541 tCO₂eq/MWh. 연도별 탄소 추이는 제시하지 않음 | 공식 공표 수치 인용; PDF 별도 개방 라이선스 미확인 |
 | [대구 하수관거 및 관로 현황](https://www.data.go.kr/data/3045606/fileData.do) | 20260101 파일 / 89행 | 관로 보강자료 보존·프로파일; 시설 좌표로 전환하지 않음 | 포털: 이용허락범위 제한 없음 |
-| [OpenStreetMap](https://www.openstreetmap.org/copyright) | 현재 지도 배경 | 위치 참고용 배경. 통계 관측자료와 별도 | © OpenStreetMap contributors / ODbL |
+| [Statistics Korea SGIS 기반 행정경계](https://github.com/DevMinGeonPark/mapcn-kr/blob/main/LICENSE-DATA) | 2026 행정리·읍면동 경계 / mapcn-kr 고정 버전 | 공개 주소의 행정구역 내부 대표점. 시설 부지 좌표 아님 | SGIS / mapcn-kr, CC BY 4.0 출처표시 |
+| [OpenStreetMap](https://www.openstreetmap.org/copyright) | 현재 지도 배경·동/도로 객체 | 9개 시설의 동 또는 도로 대표점. 시설 부지 좌표 아님 | © OpenStreetMap contributors / ODbL |
 
 ## 원본 확보 및 연도 확정
 
@@ -30,7 +31,7 @@
 2. 위 환경부 공식 자료목록에서 “2025 하수도통계(최종).xlsx”, “2024 하수도통계(최종)★.xlsx” 다운로드 → 각각 `statistics_2025_catalog.xlsx`, `statistics_2024_catalog.xlsx`.
 3. GIR 게시글 86의 PDF 다운로드 → `data/raw/gir_2025.pdf`. 게시글 82의 PDF는 `gir_2024.pdf`.
 4. 15137402에서 연결되는 국가하수도정보시스템의 통계별 CSV는 기존 `data/raw/한국환경공단_하수도정보/`에 보존. 재수집 시 기준연도·단위를 함께 저장.
-5. 좌표가 필요하면 공식 시설 좌표와 근거 URL을 확인해 `data/coordinates.csv`에 입력. 지오코딩 추정값으로 대체하지 않는다.
+5. 추정 지도점은 `python scripts/estimate_facility_locations.py`로 행정리 경계 또는 OSM 동·도로 대표점에서 재생성. `data/coordinates_estimated.csv`에 위치 유형과 출처를 기록한다. 공식 시설 좌표가 확보되면 `data/coordinates.csv`에 근거 URL·verified=true로 별도 입력한다.
 
 ## 표준 컬럼과 단위
 

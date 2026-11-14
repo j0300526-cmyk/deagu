@@ -26,7 +26,8 @@ def write_reports(data, manifest):
 ['[GIR 2025 승인 계수]('+GIR_URL+')','2025-12-18 공표 / 2021–2023 평균','소비단 0.4330 tCO₂eq/MWh. 2023 단년도 0.4173과 구분','공식 공표 수치 인용; PDF 별도 개방 라이선스 미확인'],
 ['[GIR 2024 승인 계수](https://www.gir.go.kr/home/board/read.do?boardMasterId=2&boardId=82&menuId=36)','2025-03-31 공표 / 2020–2022 평균','2024 CSV의 참고 환산량 0.4541 tCO₂eq/MWh. 연도별 탄소 추이는 제시하지 않음','공식 공표 수치 인용; PDF 별도 개방 라이선스 미확인'],
 ['[대구 하수관거 및 관로 현황](https://www.data.go.kr/data/3045606/fileData.do)','20260101 파일 / 89행','관로 보강자료 보존·프로파일; 시설 좌표로 전환하지 않음','포털: 이용허락범위 제한 없음'],
-['[OpenStreetMap](https://www.openstreetmap.org/copyright)','현재 지도 배경','위치 참고용 배경. 통계 관측자료와 별도','© OpenStreetMap contributors / ODbL']])}
+['[Statistics Korea SGIS 기반 행정경계](https://github.com/DevMinGeonPark/mapcn-kr/blob/main/LICENSE-DATA)','2026 행정리·읍면동 경계 / mapcn-kr 고정 버전','공개 주소의 행정구역 내부 대표점. 시설 부지 좌표 아님','SGIS / mapcn-kr, CC BY 4.0 출처표시'],
+['[OpenStreetMap](https://www.openstreetmap.org/copyright)','현재 지도 배경·동/도로 객체','9개 시설의 동 또는 도로 대표점. 시설 부지 좌표 아님','© OpenStreetMap contributors / ODbL']])}
 
 ## 원본 확보 및 연도 확정
 
@@ -46,7 +47,7 @@ def write_reports(data, manifest):
 2. 위 환경부 공식 자료목록에서 “2025 하수도통계(최종).xlsx”, “2024 하수도통계(최종)★.xlsx” 다운로드 → 각각 `statistics_2025_catalog.xlsx`, `statistics_2024_catalog.xlsx`.
 3. GIR 게시글 86의 PDF 다운로드 → `data/raw/gir_2025.pdf`. 게시글 82의 PDF는 `gir_2024.pdf`.
 4. 15137402에서 연결되는 국가하수도정보시스템의 통계별 CSV는 기존 `data/raw/한국환경공단_하수도정보/`에 보존. 재수집 시 기준연도·단위를 함께 저장.
-5. 좌표가 필요하면 공식 시설 좌표와 근거 URL을 확인해 `data/coordinates.csv`에 입력. 지오코딩 추정값으로 대체하지 않는다.
+5. 추정 지도점은 `python scripts/estimate_facility_locations.py`로 행정리 경계 또는 OSM 동·도로 대표점에서 재생성. `data/coordinates_estimated.csv`에 위치 유형과 출처를 기록한다. 공식 시설 좌표가 확보되면 `data/coordinates.csv`에 근거 URL·verified=true로 별도 입력한다.
 
 ## 표준 컬럼과 단위
 
@@ -73,7 +74,7 @@ def write_reports(data, manifest):
 - 품질 검토 플래그가 있는 전국 시설: {q['flagged_n']}개. 전국 비교·모델 적격: {q['benchmark_n']:,}개, 대구 적격: {q['daegu_benchmark_n']}개.
 - 전국 원단위 계산 가능: {ns['intensity_valid_n']:,}개. 전력 총계는 양의 전력 기록을 합산한다. 결측이 존재하면 전국 전체 실측 총계가 아닌 확보 기록 합계이다.
 - 유입량 가중 평균 {ns['weighted_kwh_m3']:.4f}, 전국 품질검토 통과 시설의 원단위 중앙값은 JSON으로 확인 가능. 원자료 총계에는 플래그 시설을 보존한다.
-- 검증 좌표 {q['coordinates_n']}개. 지도 시설 표시는 비활성 상태이며 임의 마커를 만들지 않는다.
+- 지도 위치 {q['coordinates_n']}개: 공식 검증 {q['coordinates_verified_n']}개, 주소 기반 추정 {q['coordinates_estimated_n']}개. 추정점은 시설 부지 좌표가 아닌 행정구역·동·도로 대표점이다.
 - {q['previous_year_note']}
 - 전년 비교는 시도·구군·정규화 시설명 유일 일치 + 공백 정규화 주소 일치 조건을 사용한다. 대구 {len(data['trends'])}개 연결. 행정구역 변화·개명 시설을 임의 연결하지 않는다.
 
@@ -334,7 +335,7 @@ npm run preview
 
 Vercel: 프레임워크 Vite, 빌드 `npm run build`, 출력 `dist`. `vercel.json` 포함.
 사전 생성된 JSON이 저장되어 있으므로 배포 빌드 중 Python·API 키·서버 DB는 필요하지 않다.
-실제 배포는 수행하지 않았다. SPA 내부 화면은 해시 경로를 사용해 새로고침을 지원한다.
+공개 사이트: https://deagu-phi.vercel.app. SPA 내부 화면은 해시 경로를 사용해 새로고침을 지원한다.
 
 ## 분석 재현 및 파일
 
@@ -363,8 +364,11 @@ Vercel: 프레임워크 Vite, 빌드 `npm run build`, 출력 `dist`. `vercel.jso
 
 Overview, Facility Map, Energy Benchmark, AI Insights, Carbon Simulator, Policy Insights의 6개 화면.
 전국 비교와 대구 분석, 관측·근사·AI·가정 시나리오를 구분한다. 모든 결과는 2025년이며 전년 비교만 2024년을 별도 표시한다.
-지도는 검증된 시설 좌표가 없어 시설 마커를 표시하지 않는다. 공식 좌표·근거 URL·verified=true를
-`data/coordinates.csv`에 입력하고 재분석하면 Leaflet에 반영된다. OpenStreetMap은 지도 배경으로만 사용한다.
+지도는 2025년 시설 주소를 2026년 SGIS 기반 행정경계의 구역 내부 대표점 또는 OSM 동·도로 객체에 연결한
+추정 위치를 표시한다. 이 점은 시설 필지·건물 좌표가 아니다. 공식 좌표는 아직 {q['coordinates_verified_n']}개이며,
+공식 좌표·근거 URL·verified=true를 `data/coordinates.csv`에 넣으면 추정점보다 우선한다.
+추정점별 위치 유형·원주소·출처는 `data/coordinates_estimated.csv`와 지도 팝업에 공개한다.
+행정경계: Statistics Korea SGIS / mapcn-kr (CC BY 4.0). 지도·동·도로 객체: © OpenStreetMap contributors (ODbL).
 비교시설 5개 미만이면 상대효율을 표시하지 않고 사유를 제시한다.
 
 유입량은 일평균 값을 연간 환산한 분모이다. BOD 제거질량은 연평균값의 곱에 의한 근사이며,
@@ -376,7 +380,7 @@ AI 예측은 달성 가능한 최적 전력량이 아니며 시뮬레이터 절�
 
 공식 공모전 제출 양식·참가자 정보는 제공되지 않아 활용 내역서를 전사 가능한 Markdown 초안으로 작성했다.
 공식 양식 전사, 연구자 최종 검토, 원본 라이선스 확인과 현장 운영 경계 확인은 별도 필요하다.
-자료가 없는 지도·희소 비교집단을 가상 데이터로 보완하지 않았다.
+희소 비교집단을 가상 데이터로 보완하지 않았다. 지도점은 실측 시설 좌표가 아니라 주소에 근거한 추정임을 표시한다.
 '''
     api = data.get('operational_api', {'available': False, 'reason': 'API 원본 수집 전'})
     reports['OPERATIONAL_API_REPORT.md'] = report_hasu(api)

@@ -11,6 +11,7 @@ export interface Facility {
 }
 export interface Summary { n:number; energy_valid_n:number; intensity_valid_n:number; electricity_kwh:number; annual_inflow_m3:number; weighted_kwh_m3:number; mean_kwh_m3:number; median_kwh_m3:number; median_bod_removal_pct:number; indirect_tco2e_est:number; benchmark_n:number; }
 export interface Peer {available:boolean; reason?:string; count:number; ratio?:number; median_kwh_m3?:number; q25_kwh_m3?:number; q75_kwh_m3?:number; percentile?:number; peer_bod_removal_median?:number; peers?:{facility_id:string;name:string;region:string;kwh_m3:number;distance:number}[];}
+export interface MapCoordinate {facility_id:string;latitude:number;longitude:number;status:'verified'|'estimated';basis:string;area_name:string|null;source_address:string|null;source_url:string;reference_year:number|null;attribution:string|null;note:string|null;}
 export interface Insight { title:string; value:string; unit:string; finding:string; comparison:string; policy:string; limitation:string; source:string; year:number; }
 export interface Score {mae:number;rmse:number;r2:number;n:number;}
 export interface Prediction {facility_id:string;name:string;actual:number;predicted:number;residual:number;ratio:number;rf_predicted:number;baseline_predicted:number;xgb_predicted:number;}
@@ -33,8 +34,8 @@ export interface Analysis {
  method_comparison:{method:string;n:number;median:number;q25:number;q75:number;median_bod_removal:number}[];
  correlations:Record<string,Record<string,number>>;
  trends:{facility_id:string;name:string;previous_year:number;year:number;electricity_previous:Nullable;electricity_current:Nullable;intensity_previous:Nullable;intensity_current:Nullable;energy_change_pct:Nullable}[];
- model:Model; quality:{rows:number;column_count:number;encoding:string;flagged_n:number;benchmark_n:number;daegu_benchmark_n:number;coordinates_n:number;flags:Record<string,number>;columns:{original:string;standard:string|null;unit:string;missing_n:number;missing_pct:number;parse_failure_n:Nullable}[];year_verification:{status:string;rows:number;columns:Record<string,{matched:number;total:number}>};previous_year_note:string;};
- coordinates:{facility_id:string;latitude:number;longitude:number;source_url:string}[];
+ model:Model; quality:{rows:number;column_count:number;encoding:string;flagged_n:number;benchmark_n:number;daegu_benchmark_n:number;coordinates_n:number;coordinates_verified_n:number;coordinates_estimated_n:number;flags:Record<string,number>;columns:{original:string;standard:string|null;unit:string;missing_n:number;missing_pct:number;parse_failure_n:Nullable}[];year_verification:{status:string;rows:number;columns:Record<string,{matched:number;total:number}>};previous_year_note:string;};
+ coordinates:MapCoordinate[];
  supplementary:{year:number;sludge:{generated_t_year:number;treated_t_year:number};reuse:{annual_treated_thousand_t:number;reused_thousand_t_year:number;reuse_pct:number}};
  insights:Insight[];
  operational_api?:OperationalAPI;

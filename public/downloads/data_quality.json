@@ -1494,7 +1494,7 @@
   "daegu_benchmark_n": 39,
   "duplicates_composite": 0,
   "duplicate_region_district_name": 4,
-  "coordinates_n": 0,
+  "coordinates_n": 39,
   "year_verification": {
     "status": "verified",
     "year": 2025,
@@ -1557,5 +1557,7 @@
   },
   "units_verified": true,
   "previous_year_rows": 4468,
-  "previous_year_note": "2024 XLSX 개별행 중 소재지가 있는 4,468행. 공표 합계 4,469개소와 1개 차이가 있어 전국 증감률은 산출하지 않음."
+  "previous_year_note": "2024 XLSX 개별행 중 소재지가 있는 4,468행. 공표 합계 4,469개소와 1개 차이가 있어 전국 증감률은 산출하지 않음.",
+  "coordinates_verified_n": 0,
+  "coordinates_estimated_n": 39
 }

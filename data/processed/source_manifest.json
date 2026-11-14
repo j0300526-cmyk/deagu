@@ -22,6 +22,16 @@
       "sha256": "51d324ce8d7fdc73881ae59cc84fcde76cb582d6a09a7ebec3dc59c6e8601513"
     },
     {
+      "path": "data/raw/geography/emd.json",
+      "bytes": 1752349,
+      "sha256": "233550b73ba4b4e8f63d4b5186be847c54e8e0d18b02657a8344a43a6209a28d"
+    },
+    {
+      "path": "data/raw/geography/ri_27.json",
+      "bytes": 145820,
+      "sha256": "620a0634631332e95932d6c347e4676843ce8395b108d57a047a2589abcff7bc"
+    },
+    {
       "path": "data/raw/gir_2024.pdf",
       "bytes": 63929,
       "sha256": "56fedb7db3b46434fe13a09d9b1dd249c84795e983a0c04a3448ce702596757f"

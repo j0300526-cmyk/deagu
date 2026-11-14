@@ -1,0 +1,19 @@
+{
+  "source_note": "OpenStreetMap/Nominatim 지명 또는 도로 객체의 대표점. 시설 부지 좌표가 아니다. ODbL 출처표시 필요.",
+  "locations": [
+    {"facility_id":"bd4534d81c9c76","latitude":35.8737700,"longitude":128.6883500,"area_name":"용계동","basis":"동 지명점","source_url":"https://www.openstreetmap.org/node/415148846"},
+    {"facility_id":"581220d4963706","latitude":35.8802100,"longitude":128.5713000,"area_name":"비산동","basis":"동 지명점","source_url":"https://www.openstreetmap.org/node/415148727"},
+    {"facility_id":"71d9090ce3dbc3","latitude":35.8802100,"longitude":128.5713000,"area_name":"비산동","basis":"동 지명점","source_url":"https://www.openstreetmap.org/node/415148727"},
+    {"facility_id":"84146717a4340b","latitude":35.9235922,"longitude":128.5955669,"area_name":"서변동","basis":"동 지명점","source_url":"https://www.openstreetmap.org/node/415148721"},
+    {"facility_id":"4cd9be15d6fcfb","latitude":35.8228905,"longitude":128.5030871,"area_name":"대천동","basis":"동 지명점","source_url":"https://www.openstreetmap.org/node/415148691"},
+    {"facility_id":"c2488713efbe93","latitude":35.6905720,"longitude":128.4163509,"area_name":"현풍서로","basis":"도로 구간 대표점","source_url":"https://www.openstreetmap.org/way/623683137"},
+    {"facility_id":"b967aab734e3ef","latitude":36.0981199,"longitude":128.6650952,"area_name":"한티로","basis":"도로 구간 대표점","source_url":"https://www.openstreetmap.org/way/1234290838"},
+    {"facility_id":"67c89e344b783b","latitude":36.1784994,"longitude":128.7056523,"area_name":"산성가음로","basis":"도로 구간 대표점","source_url":"https://www.openstreetmap.org/way/1240412703"},
+    {"facility_id":"3d4183ab70c3f3","latitude":36.1662998,"longitude":128.6739309,"area_name":"철길로","basis":"도로 구간 대표점","source_url":"https://www.openstreetmap.org/way/471552207"}
+  ],
+  "administrative_matches": [
+    {"facility_id":"08107349ffe2d2","area_name":"두산동","basis":"행정동 구역 내부 대표점","note":"공개 주소 무학로 112는 OpenStreetMap에서 두산동의 다른 공공시설에 매칭되어 시설 지점 대신 동 구역 대표점을 사용."},
+    {"facility_id":"1cd8aa81259068","area_name":"군위읍","basis":"읍 구역 내부 대표점","note":"도로명 주소의 건물 좌표를 확인하지 못함."},
+    {"facility_id":"06157884a87617","area_name":"삼국유사면","basis":"면 구역 내부 대표점","note":"원자료의 고로면은 현재 삼국유사면 명칭으로 대조. 도로명 주소의 건물 좌표를 확인하지 못함."}
+  ]
+}
