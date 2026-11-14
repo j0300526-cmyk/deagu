@@ -1,0 +1,1561 @@
+{
+  "year": 2025,
+  "encoding": "utf-8-sig",
+  "rows": 4556,
+  "daegu_rows": 39,
+  "column_count": 60,
+  "columns": [
+    {
+      "original": "시도",
+      "standard": "region",
+      "unit": "",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "구군",
+      "standard": "district",
+      "unit": "",
+      "missing_n": 26,
+      "missing_pct": 0.5706760316066725,
+      "parse_failure_n": null
+    },
+    {
+      "original": "행정구역명",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "시설명",
+      "standard": "name",
+      "unit": "",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "소재지",
+      "standard": "address",
+      "unit": "",
+      "missing_n": 5,
+      "missing_pct": 0.10974539069359088,
+      "parse_failure_n": null
+    },
+    {
+      "original": "시설용량",
+      "standard": "capacity_m3_day",
+      "unit": "m³/일",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "물리적용량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "생물학적용량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "고도용량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "유입하수량",
+      "standard": "inflow_m3_day",
+      "unit": "m³/일",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "물리적유입하수량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "생물학적유입하수량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "고도유입하수량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "방류량",
+      "standard": "outflow_m3_day",
+      "unit": "m³/일",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "물리적방류량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "생물학적방류량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "고도방류량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "유입_생화학적산소요구량(BOD)",
+      "standard": "bod_in",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "방류_생화학적산소요구량(BOD)",
+      "standard": "bod_out",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "유입_총유기탄소(TOC)",
+      "standard": "toc_in",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "방류_총유기탄소(TOC)",
+      "standard": "toc_out",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "유입_부유물질량(SS)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "방류_부유물질량(SS)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "유입_총질소(T-N)",
+      "standard": "tn_in",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "방류_총질소(T-N)",
+      "standard": "tn_out",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "유입_총인(T-P)",
+      "standard": "tp_in",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "방류_총인(T-P)",
+      "standard": "tp_out",
+      "unit": "mg/L",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "유입총대장균군수",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "방류총대장균군수",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "처리효율",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "처리부하량",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "처리방법",
+      "standard": "method",
+      "unit": "",
+      "missing_n": 231,
+      "missing_pct": 5.070237050043898,
+      "parse_failure_n": null
+    },
+    {
+      "original": "적용신기술",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 4267,
+      "missing_pct": 93.65671641791045,
+      "parse_failure_n": null
+    },
+    {
+      "original": "연계처리량_분뇨",
+      "standard": "linked_feces",
+      "unit": "m³/일",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "연계처리량_축산",
+      "standard": "linked_livestock",
+      "unit": "m³/일",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "연계처리량_침출수",
+      "standard": "linked_leachate",
+      "unit": "m³/일",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "연계처리량_기타",
+      "standard": "linked_other",
+      "unit": "m³/일",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "준공일",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "가동개시일",
+      "standard": "started",
+      "unit": "날짜",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "사업비(백만원)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "방류수소독방법",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 2480,
+      "missing_pct": 54.43371378402107,
+      "parse_failure_n": null
+    },
+    {
+      "original": "수계",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "지류",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 608,
+      "missing_pct": 13.345039508340651,
+      "parse_failure_n": null
+    },
+    {
+      "original": "세부단위구역",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "지역구분",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "명칭",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "목표수질_생화학적산소요구량(BOD)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 7,
+      "missing_pct": 0.15364354697102722,
+      "parse_failure_n": null
+    },
+    {
+      "original": "에너지자립율",
+      "standard": "self_sufficiency_pct",
+      "unit": "%",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "에너지자체생산량",
+      "standard": "energy_production_toe",
+      "unit": "TOE/년",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "연간총에너지사용량_계_(TOE)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "연간총에너지사용량_총전력사용량(kWh)",
+      "standard": "electricity_kwh",
+      "unit": "kWh/년",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "연간총에너지사용량_자체에너지사용량(TOE)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "하수처리량당이산화탄소(CO2)배출량",
+      "standard": "reported_co2_kg_m3",
+      "unit": "kgCO₂/m³",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": 0
+    },
+    {
+      "original": "운영주체",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "위탁업체명",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 276,
+      "missing_pct": 6.057945566286216,
+      "parse_failure_n": null
+    },
+    {
+      "original": "위탁비용",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "위탁계약기간(시작)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 261,
+      "missing_pct": 5.728709394205443,
+      "parse_failure_n": null
+    },
+    {
+      "original": "위탁계약기간(종료)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 261,
+      "missing_pct": 5.728709394205443,
+      "parse_failure_n": null
+    },
+    {
+      "original": "직원총수(명)",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    },
+    {
+      "original": "안전사고건수",
+      "standard": null,
+      "unit": "분석 미사용 / 단위 미확인",
+      "missing_n": 0,
+      "missing_pct": 0.0,
+      "parse_failure_n": null
+    }
+  ],
+  "files": [
+    {
+      "file": "data/raw/facilities_portal_download.csv",
+      "rows": 4556,
+      "columns": 60,
+      "encoding": "utf-8-sig",
+      "year_min": null,
+      "year_max": null,
+      "missing": {
+        "시도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "구군": {
+          "n": 26,
+          "pct": 0.5706760316066725
+        },
+        "행정구역명": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시설명": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "소재지": {
+          "n": 5,
+          "pct": 0.10974539069359088
+        },
+        "시설용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "물리적용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "생물학적용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "고도용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "물리적유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "생물학적유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "고도유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "물리적방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "생물학적방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "고도방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_생화학적산소요구량(BOD)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_생화학적산소요구량(BOD)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_총유기탄소(TOC)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_총유기탄소(TOC)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_부유물질량(SS)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_부유물질량(SS)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_총질소(T-N)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_총질소(T-N)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_총인(T-P)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_총인(T-P)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입총대장균군수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류총대장균군수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리효율": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리부하량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리방법": {
+          "n": 231,
+          "pct": 5.070237050043898
+        },
+        "적용신기술": {
+          "n": 4267,
+          "pct": 93.65671641791045
+        },
+        "연계처리량_분뇨": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연계처리량_축산": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연계처리량_침출수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연계처리량_기타": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "준공일": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "가동개시일": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "사업비(백만원)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류수소독방법": {
+          "n": 2480,
+          "pct": 54.43371378402107
+        },
+        "수계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "지류": {
+          "n": 608,
+          "pct": 13.345039508340651
+        },
+        "세부단위구역": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "지역구분": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "명칭": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "목표수질_생화학적산소요구량(BOD)": {
+          "n": 7,
+          "pct": 0.15364354697102722
+        },
+        "에너지자립율": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "에너지자체생산량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연간총에너지사용량_계_(TOE)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연간총에너지사용량_총전력사용량(kWh)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연간총에너지사용량_자체에너지사용량(TOE)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "하수처리량당이산화탄소(CO2)배출량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "운영주체": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "위탁업체명": {
+          "n": 276,
+          "pct": 6.057945566286216
+        },
+        "위탁비용": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "위탁계약기간(시작)": {
+          "n": 261,
+          "pct": 5.728709394205443
+        },
+        "위탁계약기간(종료)": {
+          "n": 261,
+          "pct": 5.728709394205443
+        },
+        "직원총수(명)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "안전사고건수": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "51d324ce8d7fdc73881ae59cc84fcde76cb582d6a09a7ebec3dc59c6e8601513"
+    },
+    {
+      "file": "data/raw/대구공공시설관리공단_하수관거 및 관로 현황_20260101.csv",
+      "rows": 89,
+      "columns": 10,
+      "encoding": "cp949",
+      "year_min": null,
+      "year_max": null,
+      "missing": {
+        "관리사업처": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "하 천": {
+          "n": 38,
+          "pct": 42.69662921348314
+        },
+        "구 간": {
+          "n": 1,
+          "pct": 1.1235955056179776
+        },
+        "규 격": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연 장(M)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "수 문": {
+          "n": 67,
+          "pct": 75.28089887640449
+        },
+        "우수토실": {
+          "n": 34,
+          "pct": 38.20224719101123
+        },
+        "맨 홀": {
+          "n": 6,
+          "pct": 6.741573033707865
+        },
+        "역사이펀": {
+          "n": 82,
+          "pct": 92.13483146067416
+        },
+        "환기구": {
+          "n": 67,
+          "pct": 75.28089887640449
+        }
+      },
+      "sha256": "47c69a646beb82e7f86fe4fdc3678a444aa2784ee9e41cbe5422e4eb4b3fe824"
+    },
+    {
+      "file": "data/raw/한국환경공단_공공하수처리시설 현황_20251231.csv",
+      "rows": 4556,
+      "columns": 60,
+      "encoding": "utf-8-sig",
+      "year_min": null,
+      "year_max": null,
+      "missing": {
+        "시도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "구군": {
+          "n": 26,
+          "pct": 0.5706760316066725
+        },
+        "행정구역명": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시설명": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "소재지": {
+          "n": 5,
+          "pct": 0.10974539069359088
+        },
+        "시설용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "물리적용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "생물학적용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "고도용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "물리적유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "생물학적유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "고도유입하수량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "물리적방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "생물학적방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "고도방류량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_생화학적산소요구량(BOD)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_생화학적산소요구량(BOD)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_총유기탄소(TOC)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_총유기탄소(TOC)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_부유물질량(SS)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_부유물질량(SS)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_총질소(T-N)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_총질소(T-N)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입_총인(T-P)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류_총인(T-P)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "유입총대장균군수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류총대장균군수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리효율": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리부하량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리방법": {
+          "n": 231,
+          "pct": 5.070237050043898
+        },
+        "적용신기술": {
+          "n": 4267,
+          "pct": 93.65671641791045
+        },
+        "연계처리량_분뇨": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연계처리량_축산": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연계처리량_침출수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연계처리량_기타": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "준공일": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "가동개시일": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "사업비(백만원)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "방류수소독방법": {
+          "n": 2480,
+          "pct": 54.43371378402107
+        },
+        "수계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "지류": {
+          "n": 608,
+          "pct": 13.345039508340651
+        },
+        "세부단위구역": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "지역구분": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "명칭": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "목표수질_생화학적산소요구량(BOD)": {
+          "n": 7,
+          "pct": 0.15364354697102722
+        },
+        "에너지자립율": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "에너지자체생산량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연간총에너지사용량_계_(TOE)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연간총에너지사용량_총전력사용량(kWh)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연간총에너지사용량_자체에너지사용량(TOE)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "하수처리량당이산화탄소(CO2)배출량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "운영주체": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "위탁업체명": {
+          "n": 276,
+          "pct": 6.057945566286216
+        },
+        "위탁비용": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "위탁계약기간(시작)": {
+          "n": 261,
+          "pct": 5.728709394205443
+        },
+        "위탁계약기간(종료)": {
+          "n": 261,
+          "pct": 5.728709394205443
+        },
+        "직원총수(명)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "안전사고건수": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "51d324ce8d7fdc73881ae59cc84fcde76cb582d6a09a7ebec3dc59c6e8601513"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 년도별 하수도 요금.csv",
+      "rows": 25,
+      "columns": 4,
+      "encoding": "cp949",
+      "year_min": 2001,
+      "year_max": 2025,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "평균단가": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "총괄단위원가": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "현실화율": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "e23baac3aced6e0a3ae7cda161a37f4ff213cddf0f4b4ade9793c8aa148ec3ec"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 시도별 하수도 보급율.csv",
+      "rows": 25,
+      "columns": 9,
+      "encoding": "cp949",
+      "year_min": 2001,
+      "year_max": 2025,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "총 계획연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "총 시설연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "합류식 시설연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "분류식 시설연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "오수관로 시설연장": {
+          "n": 4,
+          "pct": 16.0
+        },
+        "우수관로 시설연장": {
+          "n": 4,
+          "pct": 16.0
+        },
+        "하수관로 보급율": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "분류식화율": {
+          "n": 7,
+          "pct": 28.000000000000004
+        }
+      },
+      "sha256": "d47d3b6fe26c5e6aace4b28777d4534c5dae8fed1e1ff219e54ab26d10bb6222"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 시도별 하수도 요금.csv",
+      "rows": 100,
+      "columns": 8,
+      "encoding": "cp949",
+      "year_min": 2009,
+      "year_max": 2014,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시도 코드": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시도 명칭": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "연간부과량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "부과액": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "평균단가": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "총괄단위원가": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "현실화율": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "1ec45141f0d78decaedf0f15f42ad170c89859443b39e84896f29bb6e2fd277a"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 하수관로 년도별 시설현황.csv",
+      "rows": 25,
+      "columns": 9,
+      "encoding": "cp949",
+      "year_min": 2001,
+      "year_max": 2025,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "총 계획연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "총 시설연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "합류식 시설연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "분류식 시설연장": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "오수관로 시설연장": {
+          "n": 4,
+          "pct": 16.0
+        },
+        "우수관로 시설연장": {
+          "n": 4,
+          "pct": 16.0
+        },
+        "하수관로 보급율": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "분류식화율": {
+          "n": 7,
+          "pct": 28.000000000000004
+        }
+      },
+      "sha256": "d47d3b6fe26c5e6aace4b28777d4534c5dae8fed1e1ff219e54ab26d10bb6222"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 하수도 보급율.csv",
+      "rows": 25,
+      "columns": 7,
+      "encoding": "cp949",
+      "year_min": 2001,
+      "year_max": 2025,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "총인구(명)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리인구": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리시설갯수(500톤이상)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리시설갯수(500톤미만)": {
+          "n": 2,
+          "pct": 8.0
+        },
+        "공공하수처리구역인구보급률(%)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시설용량": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "90c7b1aedd7f071c1ab7c6aa9c7d7bb93fe4731e9c8eb24304d89562fe573461"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 하수도 세입 현황.csv",
+      "rows": 22,
+      "columns": 8,
+      "encoding": "cp949",
+      "year_min": 2001,
+      "year_max": 2022,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "재정별 사업비 소계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "중앙정부지원액(국고)": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "지방비": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "하수도 사용료": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "원인자부담금": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "기타잡수입": {
+          "n": 7,
+          "pct": 31.818181818181817
+        },
+        "기타(이월액 포함)": {
+          "n": 9,
+          "pct": 40.909090909090914
+        }
+      },
+      "sha256": "e4b09a6c145e9e5ca8df137ca9a8d8a0044aec8b879b994170eb0b93cb7c680f"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 하수도 세출 현황.csv",
+      "rows": 23,
+      "columns": 12,
+      "encoding": "cp949",
+      "year_min": 2001,
+      "year_max": 2023,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "용도별사업비 소계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리장 소계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리장 시설비": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처리장 기타": {
+          "n": 2,
+          "pct": 8.695652173913043
+        },
+        "하수관로 소계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "하수관로 시설비": {
+          "n": 2,
+          "pct": 8.695652173913043
+        },
+        "하수관로 기타": {
+          "n": 2,
+          "pct": 8.695652173913043
+        },
+        "하수저류시설 소계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "하수저류시설 시설비": {
+          "n": 2,
+          "pct": 8.695652173913043
+        },
+        "하수저류시설 기타": {
+          "n": 2,
+          "pct": 8.695652173913043
+        },
+        "기타 합계": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "9e97af38214562e44cb19b72247901614c74fbfc2985acd0352709365021b641"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 하수슬러지 발생 및 처리.csv",
+      "rows": 100,
+      "columns": 17,
+      "encoding": "cp949",
+      "year_min": 2009,
+      "year_max": 2014,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시도 코드": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시도 명칭": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "발생량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "처분량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "재활용 연료화": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "재활용 비료화": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "재활용 기타": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "소각": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "건조": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "매립": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "기타": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "용융": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "외부위탁처리": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "수도권광역처리": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "미처분량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "해양방류": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "eeb34bc940e3dcc0740b1d3cc90e59ac1d320f8ec5596cb6f132790d4c3dbb1c"
+    },
+    {
+      "file": "data/raw/한국환경공단_하수도정보/웹사이트 하수처리수 재이용수.csv",
+      "rows": 100,
+      "columns": 11,
+      "encoding": "cp949",
+      "year_min": 2009,
+      "year_max": 2014,
+      "missing": {
+        "년도": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시도 코드": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시도 명칭": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시설 갯수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "시설 용량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "년간 하수 처리량": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "하수 처리량 평균": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "재이용수 합계": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "장내 용수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "장외 용수": {
+          "n": 0,
+          "pct": 0.0
+        },
+        "재이용율": {
+          "n": 0,
+          "pct": 0.0
+        }
+      },
+      "sha256": "07cb6678d1c59ef66b12e5eaf01d309215b251d91dbfacb038732264f9658b9e"
+    }
+  ],
+  "flags": {
+    "BOD 제거율 계산 불가": 23,
+    "용량 대비 유입량 250% 초과": 19,
+    "용량 대비 유입량 5% 미만": 37,
+    "유입량 결측 또는 0 이하": 29,
+    "전력 결측 또는 0 이하": 36,
+    "전력원단위 검토 범위 밖": 68,
+    "처리공법 결측": 231
+  },
+  "flagged_n": 344,
+  "benchmark_n": 4212,
+  "daegu_benchmark_n": 39,
+  "duplicates_composite": 0,
+  "duplicate_region_district_name": 4,
+  "coordinates_n": 0,
+  "year_verification": {
+    "status": "verified",
+    "year": 2025,
+    "rows": 4556,
+    "columns": {
+      "시도": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "시설명": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "소재지": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "시설용량": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "유입하수량": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "방류량": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "유입_생화학적산소요구량(BOD)": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "방류_생화학적산소요구량(BOD)": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "유입_총유기탄소(TOC)": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "유입_총질소(T-N)": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "유입_총인(T-P)": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "처리방법": {
+        "matched": 4556,
+        "total": 4556
+      },
+      "연간총에너지사용량_총전력사용량(kWh)": {
+        "matched": 4556,
+        "total": 4556
+      }
+    },
+    "evidence": "공식 2025 XLSX의 개별 시설행과 13개 필드 전수 대조. 문자열 공백 정규화, 수치 허용오차 0.001."
+  },
+  "units_verified": true,
+  "previous_year_rows": 4468,
+  "previous_year_note": "2024 XLSX 개별행 중 소재지가 있는 4,468행. 공표 합계 4,469개소와 1개 차이가 있어 전국 증감률은 산출하지 않음."
+}

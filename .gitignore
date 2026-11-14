@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+*.tsbuildinfo
+.env*
+!.env.example
+tmp/
+/data/raw/
+/data/processed/hasu_operational_raw_2025.csv
+/data/*.log
+/data/*.pdf
+/data/*.csv
+!/data/coordinates.csv

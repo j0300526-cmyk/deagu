@@ -1,0 +1,2539 @@
+{
+  "available": true,
+  "model": "XGBoost",
+  "scale": "log(kWh/m³)",
+  "method": "TreeExplainer / interventional",
+  "feature_perturbation": "interventional",
+  "model_output": "raw",
+  "approximate": false,
+  "scope": "대구 독립 지역 평가 시설의 XGBoost 예측 설명",
+  "n": 39,
+  "background_n": 100,
+  "background_facility_ids": [
+    "ae2b2f6fbdb791",
+    "83646f208d4fbc",
+    "8777a80192fb2c",
+    "cc9d78cfba148d",
+    "a7226571834784",
+    "b72a8f603687e7",
+    "fc87fa249a525e",
+    "71b4c5965852bd",
+    "f2cac840047d01",
+    "d05710c59ced3a",
+    "30bef5a22f85d4",
+    "641c267f520465",
+    "4876a2bf0b0212",
+    "272955f663fe86",
+    "a3f5f98dc1e22c",
+    "271c8132a3668a",
+    "bd6cab2c85cfbe",
+    "68bd4a283e852f",
+    "aa328fe08ec46c",
+    "1dcca38615411b",
+    "d3011f35694dfe",
+    "b471e2bbc9154c",
+    "6122f607370e30",
+    "8543baafefa57c",
+    "8832e75e2d42d6",
+    "93446d464e9fc1",
+    "05864572bd7111",
+    "ee021d342a55d0",
+    "864c58ab8cdefa",
+    "4e80a636f055b2",
+    "2bcd91ab61dc68",
+    "47e168732ea902",
+    "04993fd1c9d463",
+    "575e9b98b68b04",
+    "464f4d02fd7b59",
+    "90508886c9949c",
+    "66833106a33f27",
+    "117274816208e5",
+    "9e7e3e121a37dc",
+    "d453fe8d0dc033",
+    "b04bd2f5ed63a8",
+    "5b62ca5b50e19b",
+    "90ecaa048ea5c7",
+    "987f1c3fd76d6e",
+    "2f61a1d02210bb",
+    "417bcffa36b161",
+    "a57c73b1ea3626",
+    "ee15eebafd7f7a",
+    "852da00f389b7f",
+    "a93a39216a5e96",
+    "61a4888ea88b63",
+    "9f1ca4437c7458",
+    "383d938dc28592",
+    "9cfd2ed26dcf4e",
+    "079d153a03f58b",
+    "41e4aeb298dac4",
+    "013e1b41d46388",
+    "b4825cf0d4ea6a",
+    "1c6805bec0114e",
+    "65c084f4c7ac57",
+    "35f122bd98bb5a",
+    "9b0945f206a959",
+    "36aac662077a54",
+    "f3a13c202bd172",
+    "9c82fbb23790a6",
+    "bcfe299a4ba858",
+    "35b3d2ad0b5234",
+    "d19872d7d6a1f3",
+    "648a6922d68942",
+    "d928f3c3687e97",
+    "4e9aaa88de919d",
+    "d4ea9c0507a337",
+    "02de3643a853ec",
+    "75b1a810d41683",
+    "7c902669a60112",
+    "06d8795074fada",
+    "a48037b732bbf9",
+    "7d559002800916",
+    "1ddb541037868d",
+    "1196e54694cea7",
+    "89b835dd1320cd",
+    "78f0745100f05d",
+    "8ddec3487262c3",
+    "52ea59eb799a68",
+    "cc2e52964f1924",
+    "e0c60f73608e19",
+    "2221acfcdc11a5",
+    "a83e174cb68660",
+    "cb4e144b5a8440",
+    "2f383ba159f78e",
+    "53edc9dc2bb197",
+    "afca8b7456c68a",
+    "596240c49368e9",
+    "ec4d9c2d33c2c5",
+    "b9ef8e47a1a93c",
+    "a93d8aa3ffed7b",
+    "5f1c96cd850723",
+    "6c08a5f5b18f66",
+    "bd37f469a3099b",
+    "0811bf46e9534e"
+  ],
+  "background_scope": "대구를 제외한 적격 훈련 시설에서 seed=42로 100개 무작위 추출",
+  "base_value": 0.3609192285956891,
+  "baseline_prediction": 1.4346475776990533,
+  "features": [
+    {
+      "key": "log_capacity",
+      "label": "시설용량 (log)"
+    },
+    {
+      "key": "log_inflow",
+      "label": "일평균 유입량 (log)"
+    },
+    {
+      "key": "bod_in",
+      "label": "유입 BOD"
+    },
+    {
+      "key": "tn_in",
+      "label": "유입 T-N"
+    },
+    {
+      "key": "tp_in",
+      "label": "유입 T-P"
+    },
+    {
+      "key": "age_years",
+      "label": "가동기간"
+    },
+    {
+      "key": "process_key",
+      "label": "처리공법"
+    }
+  ],
+  "importance": [
+    {
+      "key": "log_inflow",
+      "feature": "일평균 유입량 (log)",
+      "mean_abs": 0.6377569406401493,
+      "rank": 1
+    },
+    {
+      "key": "log_capacity",
+      "feature": "시설용량 (log)",
+      "mean_abs": 0.27819010440228087,
+      "rank": 2
+    },
+    {
+      "key": "age_years",
+      "feature": "가동기간",
+      "mean_abs": 0.1608711525958736,
+      "rank": 3
+    },
+    {
+      "key": "process_key",
+      "feature": "처리공법",
+      "mean_abs": 0.10517122935516596,
+      "rank": 4
+    },
+    {
+      "key": "bod_in",
+      "feature": "유입 BOD",
+      "mean_abs": 0.0378526646217394,
+      "rank": 5
+    },
+    {
+      "key": "tp_in",
+      "feature": "유입 T-P",
+      "mean_abs": 0.024414725642701134,
+      "rank": 6
+    },
+    {
+      "key": "tn_in",
+      "feature": "유입 T-N",
+      "mean_abs": 0.01856021793917908,
+      "rank": 7
+    }
+  ],
+  "predictions": [
+    {
+      "facility_id": "bd4534d81c9c76",
+      "name": "안심",
+      "base_value": 0.3609192285956891,
+      "predicted_log": -0.7401567697525024,
+      "predicted": 0.4770391285419464,
+      "reconstructed_predicted": 0.47703932051382714,
+      "additivity_error": 4.112043321402581e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 10.518294741644821,
+          "shap_value": -1.3733706062845885,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 10.757924157061597,
+          "shap_value": 0.3220572007479495,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 23.54277891854894,
+          "shap_value": -0.16519781865470576,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "A2O",
+          "shap_value": 0.05090842076315311,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 207.3,
+          "shap_value": 0.02817025897471467,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 4.712,
+          "shap_value": 0.0204412323552242,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 44.324,
+          "shap_value": 0.015915724954393227,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "581220d4963706",
+      "name": "달서천",
+      "base_value": 0.3609192285956891,
+      "predicted_log": -0.9885976314544678,
+      "predicted": 0.3720981478691101,
+      "reconstructed_predicted": 0.37209821166228996,
+      "additivity_error": 1.8174587634867123e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 12.079567936411905,
+          "shap_value": -1.4807176140215597,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 12.899222326086994,
+          "shap_value": 0.3027757202304201,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 38.47227926078029,
+          "shap_value": -0.18075535393843892,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 205.3,
+          "shap_value": 0.02324364606785821,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 5.73,
+          "shap_value": -0.018577517774392618,
+          "rank": 5
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "A2O",
+          "shap_value": 0.01708059631571814,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 52.742,
+          "shap_value": -0.012566155183885713,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "71d9090ce3dbc3",
+      "name": "북부",
+      "base_value": 0.3609192285956891,
+      "predicted_log": -0.9247773885726929,
+      "predicted": 0.3966197073459625,
+      "reconstructed_predicted": 0.3966197510686925,
+      "additivity_error": 1.2541628557904971e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 11.450955375918562,
+          "shap_value": -1.4748313546602732,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 12.04355959836804,
+          "shap_value": 0.3055577847518725,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 28.079397672826833,
+          "shap_value": -0.1772665904078167,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 236.0,
+          "shap_value": 0.08018486201995983,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 5.564,
+          "shap_value": -0.021320311273884725,
+          "rank": 5
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "A2O",
+          "shap_value": 0.01437038126307015,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 51.249,
+          "shap_value": -0.012391263445024378,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "84146717a4340b",
+      "name": "신천",
+      "base_value": 0.3609192285956891,
+      "predicted_log": -0.9114784002304077,
+      "predicted": 0.4019295573234558,
+      "reconstructed_predicted": 0.4019297069607814,
+      "additivity_error": 3.3627128170898857e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 13.055414273144471,
+          "shap_value": -1.5101905882821303,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 13.429849547739444,
+          "shap_value": 0.29970286712574307,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 32.50376454483231,
+          "shap_value": -0.18097823436313776,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "A2O",
+          "shap_value": 0.05595771620050074,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 201.4,
+          "shap_value": 0.02964902523031924,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 4.629,
+          "shap_value": 0.020170301557664062,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 41.428,
+          "shap_value": 0.013291619976225775,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "08107349ffe2d2",
+      "name": "지산",
+      "base_value": 0.3609192285956891,
+      "predicted_log": -0.433885395526886,
+      "predicted": 0.6479865312576294,
+      "reconstructed_predicted": 0.6479862628595754,
+      "additivity_error": 3.866184631884373e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 9.903907464360817,
+          "shap_value": -1.1264404468802969,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 10.426765325491356,
+          "shap_value": 0.32477460542693737,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 23.54551676933607,
+          "shap_value": -0.15601545212877682,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 273.7,
+          "shap_value": 0.0964439496709383,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 6.453,
+          "shap_value": 0.048663998152624115,
+          "rank": 5
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "A2O",
+          "shap_value": 0.01617529983333952,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 60.321,
+          "shap_value": 0.0015930351841961965,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "4cd9be15d6fcfb",
+      "name": "서부",
+      "base_value": 0.3609192285956891,
+      "predicted_log": -1.0045360326766968,
+      "predicted": 0.36621448397636414,
+      "reconstructed_predicted": 0.3662145184006519,
+      "additivity_error": 3.1245894538400876e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 12.779327003898478,
+          "shap_value": -1.481599959738378,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 13.161586013632684,
+          "shap_value": 0.30284967564221005,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 28.043805612594113,
+          "shap_value": -0.18136446809279733,
+          "rank": 3
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 5.368,
+          "shap_value": -0.031249626497592543,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 200.9,
+          "shap_value": 0.027535925455449615,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 50.527,
+          "shap_value": -0.01867536891833879,
+          "rank": 6
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "A2O",
+          "shap_value": 0.017048592122955588,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "c2488713efbe93",
+      "name": "현풍",
+      "base_value": 0.3609192285956891,
+      "predicted_log": -0.5031143426895142,
+      "predicted": 0.6046447157859802,
+      "reconstructed_predicted": 0.604644626517172,
+      "additivity_error": 4.5031825601782316e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 10.36149450859768,
+          "shap_value": -1.3378096481916146,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 10.043292972227004,
+          "shap_value": 0.3360140696383314,
+          "rank": 2
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "A2O",
+          "shap_value": 0.05336769456102047,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 168.8,
+          "shap_value": 0.038202729658805765,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.595,
+          "shap_value": 0.026206336657342035,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 37.605,
+          "shap_value": 0.018021024945774115,
+          "rank": 6
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 16.331279945242983,
+          "shap_value": 0.0019641764133120888,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "7139eab10d416e",
+      "name": "금포",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.8869854807853699,
+      "predicted": 2.427799940109253,
+      "reconstructed_predicted": 2.427800212654497,
+      "additivity_error": 1.0428763208558678e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 6.729704589038828,
+          "shap_value": -0.5449199224688346,
+          "rank": 1
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KSMBR",
+          "shap_value": 0.46338236699404656,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 8.343077871169383,
+          "shap_value": 0.3600990330253262,
+          "rank": 3
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 3.997262149212868,
+          "shap_value": 0.20111094136889732,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 212.4,
+          "shap_value": 0.05972391116403742,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 58.589,
+          "shap_value": -0.016655139356444124,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 5.989,
+          "shap_value": 0.0033251657502842134,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "a050812d40b248",
+      "name": "가창 삼산",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.6887699961662292,
+      "predicted": 1.9912647008895874,
+      "reconstructed_predicted": 1.991264928867583,
+      "additivity_error": 8.328197897977674e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 5.713402718033191,
+          "shap_value": -0.5085539593058638,
+          "rank": 1
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "HANT",
+          "shap_value": 0.33652707950313915,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 6.154858094016418,
+          "shap_value": 0.31566261819942154,
+          "rank": 3
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 13.163586584531142,
+          "shap_value": 0.11094131011770514,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 160.4,
+          "shap_value": 0.03577895608876133,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 35.708,
+          "shap_value": 0.03286671172711067,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.844,
+          "shap_value": 0.004628134522245091,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "240bd842248571",
+      "name": "하빈 현내",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.716076672077179,
+      "predicted": 2.046388864517212,
+      "reconstructed_predicted": 2.0463884751483987,
+      "additivity_error": 1.5201936154340956e-07,
+      "contributions": [
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "HANT",
+          "shap_value": 0.34433430962671985,
+          "rank": 1
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.632785353021065,
+          "shap_value": -0.32221544985251965,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 5.14166355650266,
+          "shap_value": 0.25696296310867184,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 146.5,
+          "shap_value": 0.037902576382330154,
+          "rank": 4
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 38.594,
+          "shap_value": 0.03564921604469418,
+          "rank": 5
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 17.02943189596167,
+          "shap_value": 0.02172622925194446,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.911,
+          "shap_value": -0.01920255309971253,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "cdfdac02ec38bc",
+      "name": "다사 이천",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.41646501421928406,
+      "predicted": 1.5165908336639404,
+      "reconstructed_predicted": 1.5165905866811304,
+      "additivity_error": 2.3381054747861896e-07,
+      "contributions": [
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 20.980150581793293,
+          "shap_value": -0.1339353765285341,
+          "rank": 1
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "BSTS-II",
+          "shap_value": 0.13234131495402832,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.61512051684126,
+          "shap_value": 0.12567868488666137,
+          "rank": 3
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.089332020398556,
+          "shap_value": -0.06909964668302564,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.358,
+          "shap_value": 0.03002255596613395,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 19.374,
+          "shap_value": -0.015380664296681062,
+          "rank": 6
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 45.7,
+          "shap_value": -0.014081316485535353,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "abbf27d8e77b45",
+      "name": "옥포 기세",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.32688531279563904,
+      "predicted": 1.386642575263977,
+      "reconstructed_predicted": 1.3866419545579167,
+      "additivity_error": 3.4858164843498685e-07,
+      "contributions": [
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 19.50718685831622,
+          "shap_value": -0.12670433438644976,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.51085950651685,
+          "shap_value": 0.12392827612697146,
+          "rank": 2
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.014579593753238,
+          "shap_value": -0.06699141342338408,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "SMACO",
+          "shap_value": 0.045546857452936795,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 98.9,
+          "shap_value": -0.031661857657018115,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 37.363,
+          "shap_value": 0.013635468085994943,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.804,
+          "shap_value": 0.008212739419250284,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "c612d342f41d63",
+      "name": "다사 달천",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.36414453387260437,
+      "predicted": 1.4392820596694946,
+      "reconstructed_predicted": 1.4392817631978843,
+      "additivity_error": 3.2027162488734717e-07,
+      "contributions": [
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 20.980150581793293,
+          "shap_value": -0.13662878411530982,
+          "rank": 1
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "BSTS-II",
+          "shap_value": 0.13413280408007267,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.394449154672439,
+          "shap_value": 0.06840465508226772,
+          "rank": 3
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.901972669574645,
+          "shap_value": -0.05454947642836487,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.511,
+          "shap_value": 0.029496396957401885,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 21.945,
+          "shap_value": -0.02333576845470816,
+          "rank": 6
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 46.2,
+          "shap_value": -0.014294842116069049,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "b4a7cfb3e62f15",
+      "name": "다사 박곡",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.416591614484787,
+      "predicted": 1.5167828798294067,
+      "reconstructed_predicted": 1.5167824523016142,
+      "additivity_error": 3.3092706475112976e-07,
+      "contributions": [
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "BSTS-II",
+          "shap_value": 0.18500444241530203,
+          "rank": 1
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 20.980150581793293,
+          "shap_value": -0.1464242910296889,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.330733340286331,
+          "shap_value": 0.06877120784309226,
+          "rank": 3
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.027135812528651,
+          "shap_value": -0.06134856578079052,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.996,
+          "shap_value": -0.024771125625120474,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 39.851,
+          "shap_value": 0.02041825373735264,
+          "rank": 6
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 151.1,
+          "shap_value": 0.014022133401886095,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "71842fd30354d7",
+      "name": "구지 오설",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 1.0069243907928467,
+      "predicted": 2.7371695041656494,
+      "reconstructed_predicted": 2.737168913127264,
+      "additivity_error": 2.479410028399798e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.4372078191851885,
+          "shap_value": 0.45417265327851053,
+          "rank": 1
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "HANT",
+          "shap_value": 0.3814621770598024,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 20.840520191649556,
+          "shap_value": -0.17564578626857838,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 22.4,
+          "shap_value": -0.12044751352776074,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 1.974,
+          "shap_value": 0.06364226984504057,
+          "rank": 5
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.02535169073515,
+          "shap_value": 0.04958709775179159,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 18.879,
+          "shap_value": -0.006765983882651198,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "ebe6232469501d",
+      "name": "현풍 자모",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.566707193851471,
+      "predicted": 1.7624541521072388,
+      "reconstructed_predicted": 1.7624539715122272,
+      "additivity_error": 5.394225421895271e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.484312288372662,
+          "shap_value": 0.4110260229706182,
+          "rank": 1
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 21.023956194387406,
+          "shap_value": -0.1555412707303185,
+          "rank": 2
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 23.5,
+          "shap_value": -0.07415427058309433,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "CBT",
+          "shap_value": -0.04864634636935081,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 1.942,
+          "shap_value": 0.04777746815219871,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 14.84,
+          "shap_value": 0.01473229094146518,
+          "rank": 6
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.02535169073515,
+          "shap_value": 0.010594016932009254,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "a3a5ed8650af8f",
+      "name": "하빈 묘리",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.15714441239833832,
+      "predicted": 1.1701645851135254,
+      "reconstructed_predicted": 1.1701645172221122,
+      "additivity_error": 6.046340389476157e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.4210000089583352,
+          "shap_value": 0.4007035972358426,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.713572066704308,
+          "shap_value": -0.3172443690171349,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 21.023956194387406,
+          "shap_value": -0.20360411416913848,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "현수미생물접촉포기",
+          "shap_value": -0.10620469525005319,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.674,
+          "shap_value": 0.03058850501940469,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 115.3,
+          "shap_value": -0.024114372797630495,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 35.572,
+          "shap_value": 0.016100572317955083,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "32767d78e89e71",
+      "name": "하빈 상당",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.45186716318130493,
+      "predicted": 1.5712430477142334,
+      "reconstructed_predicted": 1.571243228938807,
+      "additivity_error": 8.384908600778118e-09,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.1945831322991562,
+          "shap_value": 0.6122194853494876,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.58351893845611,
+          "shap_value": -0.2657311113929609,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 23.709787816564,
+          "shap_value": -0.21832807402533944,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "현수미생물접촉포기",
+          "shap_value": -0.11238704231349401,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 64.5,
+          "shap_value": 0.04901118153080461,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.72,
+          "shap_value": 0.023935622535500443,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 25.876,
+          "shap_value": 0.002227881286526099,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "cd4d7f4401dc60",
+      "name": "구지 도동",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 1.0070573091506958,
+      "predicted": 2.7375335693359375,
+      "reconstructed_predicted": 2.7375325449284924,
+      "additivity_error": 3.2552039153088685e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 2.0412203288596382,
+          "shap_value": 1.1718438511678324,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.4339872044851463,
+          "shap_value": -0.26052776031690883,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 20.041067761806982,
+          "shap_value": -0.1340099804563215,
+          "rank": 3
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 21.738,
+          "shap_value": -0.07009373539010993,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 15.3,
+          "shap_value": -0.05223927622995689,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.433,
+          "shap_value": -0.015968165701342515,
+          "rank": 6
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "2A2O",
+          "shap_value": 0.007132821961422439,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "1cd8aa81259068",
+      "name": "군위",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.36598339676856995,
+      "predicted": 1.4419312477111816,
+      "reconstructed_predicted": 1.4419307160961072,
+      "additivity_error": 4.061501892027586e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 7.320460778745796,
+          "shap_value": -0.5971456923446385,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 7.601402334583733,
+          "shap_value": 0.3825966984566185,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 13.516769336071183,
+          "shap_value": 0.10151045372615045,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "BCS-II",
+          "shap_value": 0.06918904928155825,
+          "rank": 4
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 34.136,
+          "shap_value": 0.01771441934630275,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 157.7,
+          "shap_value": 0.01577521322440589,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.763,
+          "shap_value": 0.015423620332294377,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "b967aab734e3ef",
+      "name": "대율",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.390493243932724,
+      "predicted": 1.477709412574768,
+      "reconstructed_predicted": 1.4777088123380824,
+      "additivity_error": 4.554728872951941e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 5.592478405097527,
+          "shap_value": -0.5389139809456538,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 5.673323267171493,
+          "shap_value": 0.32899829096510075,
+          "rank": 2
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "CNR",
+          "shap_value": 0.15179950714016738,
+          "rank": 3
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 14.929500342231348,
+          "shap_value": 0.10698352272767807,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 111.6,
+          "shap_value": -0.030097319503547625,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.67,
+          "shap_value": 0.021483301016123734,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 30.023,
+          "shap_value": -0.0106797615357209,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "4bb6a3e41a8844",
+      "name": "원곡",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.3389081060886383,
+      "predicted": 1.4034143686294556,
+      "reconstructed_predicted": 1.4034139896149271,
+      "additivity_error": 2.7392908641399316e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 5.641552398120067,
+          "shap_value": -0.4912951756993425,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 5.442417710521793,
+          "shap_value": 0.28251756055280564,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 5.782340862422998,
+          "shap_value": 0.2471836283016455,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "BCS",
+          "shap_value": -0.045027494397945705,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 107.9,
+          "shap_value": -0.023777486339095048,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.697,
+          "shap_value": 0.016447787590223015,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 24.843,
+          "shap_value": -0.00806021644442808,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "67c89e344b783b",
+      "name": "읍내",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.2887318432331085,
+      "predicted": 1.3347338438034058,
+      "reconstructed_predicted": 1.3347332649950232,
+      "additivity_error": 3.728457301233057e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 5.213848209921586,
+          "shap_value": -0.5078473855531774,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 5.25227342804663,
+          "shap_value": 0.2742838841036428,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.10912112981568498,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "NPR",
+          "shap_value": 0.07057315352663864,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 127.0,
+          "shap_value": -0.03847459186217748,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.509,
+          "shap_value": 0.027136162116148624,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 26.317,
+          "shap_value": -0.0069801103550707925,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "5d77774febbfad",
+      "name": "고곡",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.4996039569377899,
+      "predicted": 1.6480684280395508,
+      "reconstructed_predicted": 1.6480679680523773,
+      "additivity_error": 2.8355073988795e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.989752083179832,
+          "shap_value": -0.4341999359981855,
+          "rank": 1
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 5.782340862422998,
+          "shap_value": 0.21604091069944842,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.875197323201151,
+          "shap_value": 0.14555602054373595,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KNR",
+          "shap_value": 0.14525483807112327,
+          "rank": 4
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 37.701,
+          "shap_value": 0.029895276138558982,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 156.7,
+          "shap_value": 0.024493208454805425,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 4.548,
+          "shap_value": 0.0116441268818744,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "108063c0449f12",
+      "name": "이화",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.33009830117225647,
+      "predicted": 1.3911049365997314,
+      "reconstructed_predicted": 1.3911043188954137,
+      "additivity_error": 3.9543161223232204e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.7059200890882344,
+          "shap_value": -0.3406955355390528,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.875197323201151,
+          "shap_value": 0.1477081171007012,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.10598513115452078,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "BIOBEAD",
+          "shap_value": 0.07458158094959799,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.624,
+          "shap_value": 0.023859914342028787,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 103.9,
+          "shap_value": -0.023210030581103637,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 28.454,
+          "shap_value": -0.019050500281737187,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "06157884a87617",
+      "name": "양지",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.17540483176708221,
+      "predicted": 1.1917285919189453,
+      "reconstructed_predicted": 1.191728190024182,
+      "additivity_error": 3.17629579194012e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.5880240271531205,
+          "shap_value": -0.3248873877592268,
+          "rank": 1
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.10157724241922551,
+          "rank": 2
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.61512051684126,
+          "shap_value": 0.09387395108875353,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KM-SBR",
+          "shap_value": -0.07325596287846564,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.546,
+          "shap_value": 0.028874568631435976,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 22.236,
+          "shap_value": -0.016071231309324502,
+          "rank": 6
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 82.1,
+          "shap_value": 0.004374105349415913,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "0a27aa01fe3ceb",
+      "name": "송원",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.5939449071884155,
+      "predicted": 1.8111190795898438,
+      "reconstructed_predicted": 1.8111196794652322,
+      "additivity_error": 3.542699635872282e-07,
+      "contributions": [
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 4.112251882272417,
+          "shap_value": 0.2632714797322842,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.51085950651685,
+          "shap_value": 0.0736051033338299,
+          "rank": 2
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.219507705176107,
+          "shap_value": -0.06729151582869236,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 132.5,
+          "shap_value": -0.04616369083407335,
+          "rank": 4
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "JASSFR",
+          "shap_value": 0.014184490794941659,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 33.527,
+          "shap_value": -0.003716501671005972,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.862,
+          "shap_value": -0.0008633326645940542,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "98360c763683b4",
+      "name": "창평",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.1164216622710228,
+      "predicted": 1.1234694719314575,
+      "reconstructed_predicted": 1.123469255540382,
+      "additivity_error": 2.148972776949698e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 5.226821364842967,
+          "shap_value": -0.517857366290118,
+          "rank": 1
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KNR",
+          "shap_value": 0.12463123951180023,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 14.929500342231348,
+          "shap_value": 0.09140763220988447,
+          "rank": 3
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.51085950651685,
+          "shap_value": 0.08254491299478105,
+          "rank": 4
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 112.3,
+          "shap_value": -0.030048372622695753,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.496,
+          "shap_value": 0.018532897363838854,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 23.788,
+          "shap_value": -0.013708724389434792,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "66e50d89ad1136",
+      "name": "신남",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.5144596099853516,
+      "predicted": 1.672734260559082,
+      "reconstructed_predicted": 1.6727346787727502,
+      "additivity_error": 2.0934860400778632e-07,
+      "contributions": [
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 4.112251882272417,
+          "shap_value": 0.2782106891366857,
+          "rank": 1
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.155753190350744,
+          "shap_value": -0.044896969982655716,
+          "rank": 2
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 4.218,
+          "shap_value": -0.03954603965510614,
+          "rank": 3
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 32.034,
+          "shap_value": -0.02969589446205646,
+          "rank": 4
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 4.110873864173311,
+          "shap_value": -0.020685864134284204,
+          "rank": 5
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "JASSFR",
+          "shap_value": 0.00653284731226449,
+          "rank": 6
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 166.8,
+          "shap_value": 0.0036218225234188137,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "fd5065adca06d2",
+      "name": "문화",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.09667294472455978,
+      "predicted": 1.1015000343322754,
+      "reconstructed_predicted": 1.1014998952359796,
+      "additivity_error": 1.5257462621098838e-07,
+      "contributions": [
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.8501476017100584,
+          "shap_value": -0.21130771606302004,
+          "rank": 1
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KDHST",
+          "shap_value": -0.15033200037003552,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 14.929500342231348,
+          "shap_value": 0.13619463979732246,
+          "rank": 3
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 4.08260930600368,
+          "shap_value": -0.08743697696685558,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.443,
+          "shap_value": 0.03940681613443303,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 67.8,
+          "shap_value": 0.007862467331578955,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 21.515,
+          "shap_value": 0.0013663336908211932,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "3d4183ab70c3f3",
+      "name": "모산",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.11623169481754303,
+      "predicted": 1.1232562065124512,
+      "reconstructed_predicted": 1.123255958667853,
+      "additivity_error": 1.2101785218376904e-07,
+      "contributions": [
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.828641396489095,
+          "shap_value": -0.2378683726429881,
+          "rank": 1
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.16003157740917232,
+          "rank": 2
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "SBR",
+          "shap_value": -0.15438660265506768,
+          "rank": 3
+        },
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.975936331171799,
+          "shap_value": -0.09013857866841135,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.106,
+          "shap_value": 0.05913639542210149,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 78.0,
+          "shap_value": 0.016168058869661762,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 27.459,
+          "shap_value": 0.0023698674695333466,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "d494e3fa24ed3e",
+      "name": "문덕",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.9115283489227295,
+      "predicted": 2.4881222248077393,
+      "reconstructed_predicted": 2.4881225788652013,
+      "additivity_error": 9.277321111333947e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.4965075614664802,
+          "shap_value": 0.4432765164997545,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.828641396489095,
+          "shap_value": -0.24188375367433765,
+          "rank": 2
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "BSTS-II",
+          "shap_value": 0.1781148270281119,
+          "rank": 3
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.17521238001114398,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.579,
+          "shap_value": 0.029390806008741492,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 32.57,
+          "shap_value": -0.018624372461345046,
+          "rank": 6
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 98.7,
+          "shap_value": -0.014877190311817685,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "2f9e70b869ced0",
+      "name": "사직",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.961787760257721,
+      "predicted": 2.6163697242736816,
+      "reconstructed_predicted": 2.616369769561599,
+      "additivity_error": 1.2569166152331945e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.0633909220278057,
+          "shap_value": 0.6837678711250191,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.4339872044851463,
+          "shap_value": -0.2817473289766349,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 14.929500342231348,
+          "shap_value": 0.14160858413524693,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "B3",
+          "shap_value": 0.09113024308142485,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 4.033,
+          "shap_value": -0.030448316728288773,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 103.9,
+          "shap_value": -0.02213304550401517,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 37.04,
+          "shap_value": 0.01869053709844593,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "1d59aa0c02b445",
+      "name": "화북이주단지",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.5023754239082336,
+      "predicted": 1.6526423692703247,
+      "reconstructed_predicted": 1.6526419739655613,
+      "additivity_error": 2.202010869201132e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 3.0492730404820207,
+          "shap_value": 0.6169106067786925,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 3.044522437723423,
+          "shap_value": -0.4904276506759925,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 14.929500342231348,
+          "shap_value": 0.1510205595858861,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "현수미생물접촉포기",
+          "shap_value": -0.08055993329035115,
+          "rank": 4
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 30.671,
+          "shap_value": -0.04408672107907478,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 141.0,
+          "shap_value": -0.02186910016447655,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 4.584,
+          "shap_value": 0.01046821395677398,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "b45be958bfc1c6",
+      "name": "새산",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.9759495854377747,
+      "predicted": 2.653686046600342,
+      "reconstructed_predicted": 2.65368672853967,
+      "additivity_error": 3.060296369650217e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 2.7536607123542622,
+          "shap_value": 0.7944344522929169,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 2.6390573296152584,
+          "shap_value": -0.48214230542915176,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.19454880742705427,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 82.9,
+          "shap_value": 0.100853029476566,
+          "rank": 4
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KM-SBR",
+          "shap_value": -0.03413235834013904,
+          "rank": 5
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.583,
+          "shap_value": 0.022263755032763583,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 20.245,
+          "shap_value": 0.01920528241171269,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "ed82e310de4aa0",
+      "name": "성황골",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.7528144121170044,
+      "predicted": 2.122966766357422,
+      "reconstructed_predicted": 2.1229662262627014,
+      "additivity_error": 1.380185636890019e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 2.7536607123542622,
+          "shap_value": 0.7735571854448062,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 2.6390573296152584,
+          "shap_value": -0.5217867671095883,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.1982698231076938,
+          "rank": 3
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KM-SBR",
+          "shap_value": -0.04232335537322796,
+          "rank": 4
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 30.916,
+          "shap_value": -0.04176919227553299,
+          "rank": 5
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 104.3,
+          "shap_value": 0.021143591238505906,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 4.43,
+          "shap_value": 0.004803760470094858,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "3f2eb84f860bdc",
+      "name": "조락",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 1.0501950979232788,
+      "predicted": 2.858208417892456,
+      "reconstructed_predicted": 2.8582081425608186,
+      "additivity_error": 1.930195645538646e-07,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 2.388762789235098,
+          "shap_value": 0.9417257010182948,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 2.302585092994046,
+          "shap_value": -0.6227294589951634,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.21744349823449738,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 76.9,
+          "shap_value": 0.1140850536058133,
+          "rank": 4
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KM-SBR",
+          "shap_value": 0.027086436568642965,
+          "rank": 5
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 24.795,
+          "shap_value": 0.017237072511925362,
+          "rank": 6
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.702,
+          "shap_value": -0.0055726266359852165,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "cf82d842150e0a",
+      "name": "바위골",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 1.0700887441635132,
+      "predicted": 2.9156382083892822,
+      "reconstructed_predicted": 2.9156384546735468,
+      "additivity_error": 7.555844083739771e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 2.2192034840549946,
+          "shap_value": 0.9984805708672502,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 2.0794415416798357,
+          "shap_value": -0.6482775243956712,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.22350757659529336,
+          "rank": 3
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 95.1,
+          "shap_value": 0.062461828992090886,
+          "rank": 4
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 2.856,
+          "shap_value": 0.031597231960768114,
+          "rank": 5
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KM-SBR",
+          "shap_value": 0.022362424773746184,
+          "rank": 6
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 25.314,
+          "shap_value": 0.019037482332787476,
+          "rank": 7
+        }
+      ]
+    },
+    {
+      "facility_id": "0843a89a89a460",
+      "name": "병풍암",
+      "base_value": 0.3609192285956891,
+      "predicted_log": 0.8284891247749329,
+      "predicted": 2.289856433868408,
+      "reconstructed_predicted": 2.289856332897592,
+      "additivity_error": 4.590275759497331e-08,
+      "contributions": [
+        {
+          "key": "log_inflow",
+          "feature": "일평균 유입량 (log)",
+          "value": 1.6094379124341003,
+          "shap_value": 1.1151570173591607,
+          "rank": 1
+        },
+        {
+          "key": "log_capacity",
+          "feature": "시설용량 (log)",
+          "value": 1.791759469228055,
+          "shap_value": -0.8619490732054692,
+          "rank": 2
+        },
+        {
+          "key": "age_years",
+          "feature": "가동기간",
+          "value": 11.512662559890487,
+          "shap_value": 0.24670309856534003,
+          "rank": 3
+        },
+        {
+          "key": "tp_in",
+          "feature": "유입 T-P",
+          "value": 3.772,
+          "shap_value": -0.02707460025936598,
+          "rank": 4
+        },
+        {
+          "key": "tn_in",
+          "feature": "유입 T-N",
+          "value": 32.28,
+          "shap_value": -0.02557312423363328,
+          "rank": 5
+        },
+        {
+          "key": "process_key",
+          "feature": "처리공법",
+          "value": "KM-SBR",
+          "shap_value": 0.02420864046609494,
+          "rank": 6
+        },
+        {
+          "key": "bod_in",
+          "feature": "유입 BOD",
+          "value": 107.3,
+          "shap_value": -0.0039021084156411236,
+          "rank": 7
+        }
+      ]
+    }
+  ],
+  "max_additivity_error": 4.554728872951941e-07,
+  "versions": {
+    "shap": "0.54.1",
+    "xgboost": "3.4.1"
+  },
+  "note": "기여도는 자연로그 원단위 척도이며 exp(기준값 + 기여도 합)이 예측 kWh/m³이다. 양수는 기준 예측 대비 상승, 음수는 하락 방향이다. 원단위에 직접 더하지 않는다. 공법 원핫 기여도는 합산 후 중요도를 계산했다. 별도 그룹 Shapley 값은 아니다. 상관된 용량·유입량과 원핫 사이의 의존성을 깨는 interventional 배경 가정에 민감하며 인과효과·절감량이 아니다."
+}

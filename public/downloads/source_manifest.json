@@ -1,0 +1,2015 @@
+{
+  "retrieved_on": "2026-11-13",
+  "files": [
+    {
+      "path": "data/raw/2024년 승인 국가 온실가스 배출계수_전력배출계수.pdf",
+      "bytes": 63929,
+      "sha256": "56fedb7db3b46434fe13a09d9b1dd249c84795e983a0c04a3448ce702596757f"
+    },
+    {
+      "path": "data/raw/electricity_factor_extracted.txt",
+      "bytes": 1444,
+      "sha256": "ad447126f59e6e6a69f5be4fa262e64536932968253b4446960ef190cc454e2d"
+    },
+    {
+      "path": "data/raw/facilities_portal.html",
+      "bytes": 249375,
+      "sha256": "a9b92314fb78c571683e8e07580ee797db8de82865e4aeec4ccf54d361a94524"
+    },
+    {
+      "path": "data/raw/facilities_portal_download.csv",
+      "bytes": 1892563,
+      "sha256": "51d324ce8d7fdc73881ae59cc84fcde76cb582d6a09a7ebec3dc59c6e8601513"
+    },
+    {
+      "path": "data/raw/gir_2024.pdf",
+      "bytes": 63929,
+      "sha256": "56fedb7db3b46434fe13a09d9b1dd249c84795e983a0c04a3448ce702596757f"
+    },
+    {
+      "path": "data/raw/gir_2024.txt",
+      "bytes": 1444,
+      "sha256": "ad447126f59e6e6a69f5be4fa262e64536932968253b4446960ef190cc454e2d"
+    },
+    {
+      "path": "data/raw/gir_2024_page1.png",
+      "bytes": 144580,
+      "sha256": "801e58674c449cc0097e79681d8267462ebb032368b5246fc87c0462fcd0baff"
+    },
+    {
+      "path": "data/raw/gir_2025.pdf",
+      "bytes": 387652,
+      "sha256": "9d10cbda28e072a1e6efd13a368f1b6f7d34d1fa4a2093dc93235a2ac04ebc9d"
+    },
+    {
+      "path": "data/raw/gir_2025.txt",
+      "bytes": 3526,
+      "sha256": "71bdb4fa364e355c0cc29f512bfcc01e18dfc1b93d25a097bba33ac759845c85"
+    },
+    {
+      "path": "data/raw/gir_2025_page1.png",
+      "bytes": 119494,
+      "sha256": "851fc0de1d78dd381671641d8e97bd6683e7de0577d1152f78fd66b83874cecc"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-01_page1.xml",
+      "bytes": 201477,
+      "sha256": "e2db59002a5be4e7da502771b5f9faa36a67a8a8895ae7110def3d4ca1ec648b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-02_page1.xml",
+      "bytes": 202435,
+      "sha256": "39d17eea1f18d813ba07da0cabe8c65d69c15784cd22956160adc23e635d044d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-03_page1.xml",
+      "bytes": 208660,
+      "sha256": "3ea6112473795d0ebc0c191c8ac939baae2a9154c56e6d36bf31dd31333f3195"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-04_page1.xml",
+      "bytes": 202405,
+      "sha256": "066bfd687dab5fc4a786d3e58734d489fd59e258ca09cb5a05852ac3ce35fe64"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-05_page1.xml",
+      "bytes": 202044,
+      "sha256": "7142c4230bb205921d9794bab98b653e72b0a846c286d51df54a3334c6e32be1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-06_page1.xml",
+      "bytes": 199407,
+      "sha256": "750536e2cd11cdb3c98f9c63684b028fb373d6ec09c6594da5b0c7fe1d493131"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-07_page1.xml",
+      "bytes": 208597,
+      "sha256": "98dbf785c286b8b3d45308e83f25ca075bbaf70031ce32d63fa5f293fa12ab50"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-08_page1.xml",
+      "bytes": 202698,
+      "sha256": "78827e11b23daec8143a1650713ceef950c4f233b41fa6c82ca7591e7be6a221"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-09_page1.xml",
+      "bytes": 208443,
+      "sha256": "aa989ee762d28a8c6c1afc8bfca0139369249e4cec9816f8e4b4dc6a0705db27"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-10_page1.xml",
+      "bytes": 208686,
+      "sha256": "60b35e0b3e2ef949e81a84aa6645013c3eba408b57fb3ad95d17222c86fa256a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-11_page1.xml",
+      "bytes": 202385,
+      "sha256": "274c93426cb4c8fcea9197fdf17d1eddac979aff368072bd9e356104add2e36c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-12_page1.xml",
+      "bytes": 202059,
+      "sha256": "a9d928902ccf21d8dd49ede101437bf390f438c7a979f746ddbdbb2a0533fb6d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-13_page1.xml",
+      "bytes": 199448,
+      "sha256": "5181d6e42120783a269c511a2b28a9ec6bec16cdd0f174ca42dd0dc0696657f7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-14_page1.xml",
+      "bytes": 208633,
+      "sha256": "fdb20e2bbdb11eeee63e58ca1e4521c4118d48c0ca356641cb74b3d7b6c75df5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-15_page1.xml",
+      "bytes": 202693,
+      "sha256": "26bdc6402add99d26f9804e2164e4d0988f5ea7311b0e4dc4f3ee6abc0a5b8af"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-16_page1.xml",
+      "bytes": 208647,
+      "sha256": "cff135d435b18372ad50d80f40d709408923a775f4e495012def7f2c3dbcb5f1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-17_page1.xml",
+      "bytes": 208601,
+      "sha256": "226a0be7e5c71e32dbce8b2c0852c962c44de548e1af48ca734db2b5ad1d6dac"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-18_page1.xml",
+      "bytes": 208811,
+      "sha256": "e0948a9e06c7132f75178b905de56f2e55432536ebf2f68e916842f323c0785f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-19_page1.xml",
+      "bytes": 202002,
+      "sha256": "0a51444a038e722dafbcffd82a9685cc0b9efe6bd70108e2ee865d7aaae82345"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-20_page1.xml",
+      "bytes": 199372,
+      "sha256": "04b42048d8074d8acb9936c0761775a054f24a11dc3e82b58862154396d0b4f6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-21_page1.xml",
+      "bytes": 208272,
+      "sha256": "f89cb5b032ba3d6f25a03b43aa135eb7ec3cda986736be175d8eb2706f8c4608"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-22_page1.xml",
+      "bytes": 203276,
+      "sha256": "50e2629c4c65ffe5a7211778e69b71bedb8e5384478ca1dba1421509b29ac433"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-23_page1.xml",
+      "bytes": 209326,
+      "sha256": "d32d231b488f7802fae96ba766790912ecd7fd29b099b3a14a777b76f1612301"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-24_page1.xml",
+      "bytes": 209280,
+      "sha256": "0cc430ff4aef31e76688b83ed710dade1635c2802bc001c1105c1c6686ff5740"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-25_page1.xml",
+      "bytes": 202998,
+      "sha256": "9082fd2ef5a141c49dfc5fb246bd8ef3e752efe4b5bd9dd4a55aa69ef652b2e8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-26_page1.xml",
+      "bytes": 202654,
+      "sha256": "9614f2406f5b880711594b40a57d1b3667a79eaf0a52cfc7ac0659731c9cb38a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-27_page1.xml",
+      "bytes": 199700,
+      "sha256": "bb68e7bb9d55cbd4e30e7ed8e19e7d8394fb58663f8c3616086a8b89f9299245"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-28_page1.xml",
+      "bytes": 199703,
+      "sha256": "aa6afbf58ddb345ce56a58597ebffac327900e2a95a7b880f95f4bedbc65ebe5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-29_page1.xml",
+      "bytes": 202629,
+      "sha256": "db21ffb27a2ceb5aad49b8b4e07782e1a001be6d8487d75367838c8cdaf15773"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-30_page1.xml",
+      "bytes": 199684,
+      "sha256": "ddb556e958d3040ac3388426de67e1f9a00ad261dd663a03e23fd0522c4de9db"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-01-31_page1.xml",
+      "bytes": 203058,
+      "sha256": "fccdc67db6666bb74873527cc0851e83bc5ac87bb2a2b0f54daa58523da4886e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-01_page1.xml",
+      "bytes": 208941,
+      "sha256": "b2f729a961a445aabf6621191f3b21773012a7dea72c2716028ce83578ee63dd"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-02_page1.xml",
+      "bytes": 202631,
+      "sha256": "4dcb196cc0354feb6b0a442d8c13b3ad4601b34743d32e93e6969f086f2cf588"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-03_page1.xml",
+      "bytes": 200000,
+      "sha256": "f11ebda4bbeea3f9a540c1be2e0adee76a641ede40f849c1af2d3252ebdfe920"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-04_page1.xml",
+      "bytes": 209167,
+      "sha256": "6955e7cf452556224ac00e501901d619a3fb5794fab0f75e0757af54fbc01529"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-05_page1.xml",
+      "bytes": 203281,
+      "sha256": "bcfc93ca26ede3cebd44349605494bc2c7139ced994f7b96ee19a6dbaa93f97b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-06_page1.xml",
+      "bytes": 209233,
+      "sha256": "d8079438f7947390098c23f721ba43f8d58124cfe67f9020e94bc59a16353f27"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-07_page1.xml",
+      "bytes": 209203,
+      "sha256": "24a639f82d1a9aa508f04eef9b7c1cbef3e79cab1967533828ac80a25c68757e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-08_page1.xml",
+      "bytes": 203005,
+      "sha256": "c764821402ca0e3137f27a92195e926a2b3809cd70dde20368d285a813342c4f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-09_page1.xml",
+      "bytes": 202633,
+      "sha256": "78abe4981f9811e62d57c284650ecd3ac7282202c9c692ca9aa74a3831c97fd5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-10_page1.xml",
+      "bytes": 200008,
+      "sha256": "967b5b731c4415a1241bfc3653ca3b88280d3ee614c3b61b78b9d774a49dd961"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-11_page1.xml",
+      "bytes": 209174,
+      "sha256": "ea4d37394a53750ebde39212491018401bd1fe5bcd51dc51a04d6b16c2aa6a34"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-12_page1.xml",
+      "bytes": 209203,
+      "sha256": "b790f956199540dd1c3fe9d5e4417ff22e1706ef45633405030b67aefac831a5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-13_page1.xml",
+      "bytes": 209269,
+      "sha256": "b102821a8c741a9317619f31c07eeb1ef0dd674bbb049107f7adf812cdc9faa5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-14_page1.xml",
+      "bytes": 209254,
+      "sha256": "0e04c5143820e5c04cf7872b64a012e22ad3b1d9cb866f5bb0c55fabbbb4947e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-15_page1.xml",
+      "bytes": 203004,
+      "sha256": "ef02691b5537e10ea782bb70428acff487612a04c2fa958d6c6ec0cc4586d0c1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-16_page1.xml",
+      "bytes": 202628,
+      "sha256": "3dad32299f30bc0ae0a18603319f1a946a521afe7b29f7631b506514e5fcba1e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-17_page1.xml",
+      "bytes": 200002,
+      "sha256": "1f0691913e6a2667fa8822f4715c6218b3e8392e271f8b8ac8133ce4479b2509"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-18_page1.xml",
+      "bytes": 209216,
+      "sha256": "26f95b5e995eda5b8faecf1e5a89af7c641c6b4e62292fd29dbbfe7350b0426b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-19_page1.xml",
+      "bytes": 203347,
+      "sha256": "d5eecc85383eb12ea943feb2002367fdba1c7daf46e850bc00aeea31333f54da"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-20_page1.xml",
+      "bytes": 209299,
+      "sha256": "41050e731c9476edbbaa7ea2ca968e988d42dd0b321e7b1d61dc9c0e85bbc8bd"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-21_page1.xml",
+      "bytes": 203325,
+      "sha256": "3a80c7c16452fc29440d37766c186a6c6ce158db3a4d4358a5155acef31a6b56"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-22_page1.xml",
+      "bytes": 202963,
+      "sha256": "99c6e1c95a5727b279daff12ee014642d5d58d59d3a80fba249d9027653bf164"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-23_page1.xml",
+      "bytes": 202636,
+      "sha256": "06be31aaf186d87db57371f1f482274d898209beedba140103d8f0a5c980d85b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-24_page1.xml",
+      "bytes": 200009,
+      "sha256": "5263b6a22c1085e94500b4601c94596360ccd825b490179631a8d1f947164531"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-25_page1.xml",
+      "bytes": 203293,
+      "sha256": "744770f89edf565f4bd2fcae325cf750a4297dd34fa77e4d16deab7d9d509760"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-26_page1.xml",
+      "bytes": 203287,
+      "sha256": "9f892bb68bac609fe71c08b4de496e53e0c8ed8d4b644e7b094d60259dde27a1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-27_page1.xml",
+      "bytes": 209346,
+      "sha256": "98a77dca6e4a94478a9d227cbe474cd0a1d65f4c6461ba4ca99106cd5e131184"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-02-28_page1.xml",
+      "bytes": 209314,
+      "sha256": "adc891b1726b9e995ccd82113bb11c437409069867a2aa04b8aa54a9cba22aa8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-01_page1.xml",
+      "bytes": 203005,
+      "sha256": "8c75f4378a8b9dcc8b7fff7875843885c825434b22e13b907a5000929b4594f4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-02_page1.xml",
+      "bytes": 202632,
+      "sha256": "16efe30808b79be49e8f308fda9948f3aafa58021dddabe0a8cc6d4184bb8da9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-03_page1.xml",
+      "bytes": 199685,
+      "sha256": "97fcda8627aa29b59ad6a1cf2578605af6bea63c501622af5db2268a1f2f4421"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-04_page1.xml",
+      "bytes": 202998,
+      "sha256": "2b37940e8a78132605f4a49b37fce659c295c5b0cb85dd6b9f4ebb8775679ecf"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-05_page1.xml",
+      "bytes": 203331,
+      "sha256": "ddb1c115fa6566905bcfb86695dfbca2b0705e4c1fd39d4f8f9ed68d40afd0b6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-06_page1.xml",
+      "bytes": 209294,
+      "sha256": "9478d7b911be400fe1ef15353a11af181a60c44f6420bed002e5dc2dd2112513"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-07_page1.xml",
+      "bytes": 209233,
+      "sha256": "ea1a7a24208d7e9051538b59a181bd914f50812c28037443ce3ceec93c192e00"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-08_page1.xml",
+      "bytes": 202992,
+      "sha256": "3c129f64de5a47fb3df259c83689a9a7e677e158e651d61682f88519a4b61c20"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-09_page1.xml",
+      "bytes": 202619,
+      "sha256": "e5173393ac1d001d509224c01980f3199e8f3b07d0dcb50c0446d88e11d006d9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-10_page1.xml",
+      "bytes": 199979,
+      "sha256": "424044f9020c1e78a5fc60bed157415975f7edbcb00aa3063aac70935b3dd2c2"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-11_page1.xml",
+      "bytes": 209134,
+      "sha256": "eafc3c4cfde2114f36191502657ae0a10d1106c914334331497d048fe6b7c9c5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-12_page1.xml",
+      "bytes": 203252,
+      "sha256": "1f8f8a3c7154aaf2f1e4948311059af663d196cc2dc89a838646b9473b792500"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-13_page1.xml",
+      "bytes": 209258,
+      "sha256": "d2840023875db9133f73d5e5ffa195da32f8e9fc08f87db45ee937e55f69a464"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-14_page1.xml",
+      "bytes": 209242,
+      "sha256": "e53f81b8086890df2c174c0206b42757abef442d11cdbb14c64a54e958ce0192"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-15_page1.xml",
+      "bytes": 203017,
+      "sha256": "00a2381b5e2cf3f307913185074035fdf4867a94288e6b98ae370db658255a3d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-16_page1.xml",
+      "bytes": 202636,
+      "sha256": "909e5121c3150a2cd2914da50cd9af5a86092141b735b7605f8a87cb59e80685"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-17_page1.xml",
+      "bytes": 200008,
+      "sha256": "c6d5f5a086ba2d4e71ec5f771798b755266b7345d5d839cda0b73909cd029e11"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-18_page1.xml",
+      "bytes": 209179,
+      "sha256": "704848a65b75da05053d25b1759a7af1f21b2e9ceb9836111f54e504fe8663a7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-19_page1.xml",
+      "bytes": 203289,
+      "sha256": "09b64c21cc477ec381a3d32ec3fc5efdf64df842c6cd6c47abb48f398f9e4f1b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-20_page1.xml",
+      "bytes": 209267,
+      "sha256": "b59617ff8da241b32c02e8e3cb0e1d6b8e467a2e446cebe8ddb556c5026c67fa"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-21_page1.xml",
+      "bytes": 209230,
+      "sha256": "db5844e05934687808ffc127df7d03476df8affaea19d3d9176788fe1e0dee3a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-22_page1.xml",
+      "bytes": 202996,
+      "sha256": "af14b6e431cb032107cda00f12aa34f63babb13c209e09f8f62ff496358f8e99"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-23_page1.xml",
+      "bytes": 202608,
+      "sha256": "f3642ee98774d1f4333f15ff49af8d4929dc1b5926f438d3e71f68f6ba9fc5ec"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-24_page1.xml",
+      "bytes": 199971,
+      "sha256": "c0018f8d7d67b69f2d728d1254ddd123ac77d4f8049fbfa5507ce13b2037b229"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-25_page1.xml",
+      "bytes": 209165,
+      "sha256": "4a4e66f2c5db1613af1487f39ca85b6ef1c9ce6a692a9940f5e5c3cf23884f9d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-26_page1.xml",
+      "bytes": 205470,
+      "sha256": "35cb16c2b55669812ef7d1064a09842fa451e05880f2433a4fdd723fd7af7536"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-27_page1.xml",
+      "bytes": 208640,
+      "sha256": "c9f2bb47fff3081f7084695e978f446fe1190e61a1a0635471d67169162df17f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-28_page1.xml",
+      "bytes": 208608,
+      "sha256": "56bcfba88af9ef8ded6b1ac1d0309bd34f878abb997e80c01f455130a601cd89"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-29_page1.xml",
+      "bytes": 203000,
+      "sha256": "2fcfdbf3e6d27cb5a1aa071f5c0af0613a321f194ecf68460527c61adc857a5f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-30_page1.xml",
+      "bytes": 202634,
+      "sha256": "66bc906827044026cc276196f949396125e1acf571a22d53202349c3e9808e2a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-03-31_page1.xml",
+      "bytes": 200002,
+      "sha256": "f844db51f20f5f63f13ce90c3ac016b763b946c51e931b73d97973d6f935c817"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-01_page1.xml",
+      "bytes": 209164,
+      "sha256": "09e00d22a9a13818c1b5cf1567c8c962f648f11947b8c2073c1ba318a0d4207e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-02_page1.xml",
+      "bytes": 203907,
+      "sha256": "282eeab7b401782514d0c08d02f849e4dab1107cefad98c0e5a921c07975badf"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-03_page1.xml",
+      "bytes": 209886,
+      "sha256": "bfc55339d92405847afa5e9132c48ce1103d3f2d23541a34982b2e63ceb403e7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-04_page1.xml",
+      "bytes": 209840,
+      "sha256": "caac821fb8bb176a733fc8f8e44d4f67178980631a88d69946ecad3733932e6e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-05_page1.xml",
+      "bytes": 205800,
+      "sha256": "91aa180ffde49751b27119042f1dfdfbd29e1924b2265fb719bfcd2338f4c7ec"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-06_page1.xml",
+      "bytes": 203258,
+      "sha256": "11c1a7cada3343184483bd41154622f843abd13ff556ca79631cffa3616db1d4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-07_page1.xml",
+      "bytes": 200631,
+      "sha256": "396891a6c0c63bfa6557c72165c48c481c43325204acaf96049390a2196d6a35"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-08_page1.xml",
+      "bytes": 211990,
+      "sha256": "926b1016224edbe5705a1c4f7a971af19059cf67cb05fd9813a0dac77517233f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-09_page1.xml",
+      "bytes": 205439,
+      "sha256": "b7e3fb654787c032aa135e8040f30ed5f1cb1764cd586673ca840d4a782e4d32"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-10_page1.xml",
+      "bytes": 211422,
+      "sha256": "7136533ead38924293ec59753a3a88a3c90d4eb11220194c082597595f6e9bb2"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-11_page1.xml",
+      "bytes": 211381,
+      "sha256": "daad138e0690dad1a9de51199b4fc4bf4f0d97560af32e031815ab69d8f42942"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-12_page1.xml",
+      "bytes": 205763,
+      "sha256": "fd30bdffdf8f830919d405eb515ccf2a43195c6a6546ed874d3b301601ba7d4f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-13_page1.xml",
+      "bytes": 205378,
+      "sha256": "c8d06350114f72189e6e83be5780ac3a5ebebe30fff16dcdc49a58e0a1729d30"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-14_page1.xml",
+      "bytes": 202740,
+      "sha256": "c1c78b2f7fe22bb52e16243e58cf8d49953e9d3bc01dfa9230758370a619b78c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-15_page1.xml",
+      "bytes": 211878,
+      "sha256": "276b5d20f27ab847d1b3610a0d5ea7e99cb419f65a4f08abf138272e40024982"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-16_page1.xml",
+      "bytes": 206021,
+      "sha256": "029f6e72e8f6405367674e5cc9a5460959320297ada07eabccde028e902d64d4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-17_page1.xml",
+      "bytes": 212071,
+      "sha256": "c7824bfd726cc54889ecd69bd73bbc62293abb34801ee5c3ff90f9eb20e1d808"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-18_page1.xml",
+      "bytes": 212002,
+      "sha256": "0bada54b7ebf0513d5864780ba0d57e481f238d5e97c953eb24f34c77cb87e7c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-19_page1.xml",
+      "bytes": 205732,
+      "sha256": "3fe3e224a40bbfd09c175064a8b6ef615d1035c337be1991ffacf25532c3b254"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-20_page1.xml",
+      "bytes": 205389,
+      "sha256": "a082b8de0e2a20f6d1887fc006b1712cca34bac7bd775d15206233c38c5c72f4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-21_page1.xml",
+      "bytes": 202765,
+      "sha256": "58b5ccb49880efc5257fc96888a9b74b122be211915ece943ef3fedbf26fb6e9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-22_page1.xml",
+      "bytes": 211926,
+      "sha256": "660bc68195f3396e3a5b6b47806a7e6584e6a403dc527a146ef73ca2b8ba05e8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-23_page1.xml",
+      "bytes": 206046,
+      "sha256": "5be582b7900d3441772cf23103993d552f908c45c08679c9b438e80b74c39e6f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-24_page1.xml",
+      "bytes": 212032,
+      "sha256": "9f3be839ad263ecbb70aa8b690b9268046a253b209f999d415405c03281b8b62"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-25_page1.xml",
+      "bytes": 211993,
+      "sha256": "286f2b83f77f3ef2cd7a00407cecaf8f0127a3138310e3cd2cc1dc570a64d46a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-26_page1.xml",
+      "bytes": 205756,
+      "sha256": "503eb4bf44770babe2ff9f0744680157120fc88559b40fcfbd1afff81cd7573f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-27_page1.xml",
+      "bytes": 205380,
+      "sha256": "3a6f7bdcd0cf1b7da23353b1297ed524210f367096d9139e82aa2012ee02c74b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-28_page1.xml",
+      "bytes": 202759,
+      "sha256": "6c7279b6e52d7d18ad2cbc5fe6296df904330398374f325b041bd33ce5577199"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-29_page1.xml",
+      "bytes": 211944,
+      "sha256": "6a7cc3be8e64ba6bdbc18ca910c76dd0d73b4c0a70ad9b8a36a95d09406caec7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-04-30_page1.xml",
+      "bytes": 212008,
+      "sha256": "6bb30c639be9f7ee97094ebea6ac1fb949f87227f5c9696acc0dd5086c0ac721"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-01_page1.xml",
+      "bytes": 211700,
+      "sha256": "1b703d6642f9d990237e08685b1fba5babeac8f92a1752955996048897c51c43"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-02_page1.xml",
+      "bytes": 205762,
+      "sha256": "8d82eac259a7aced9c883f5e155b7f1d53234116f8710ead0c1781bf976b3044"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-03_page1.xml",
+      "bytes": 205761,
+      "sha256": "7b544814bea407dbc1e61dbe0f280ee0a3b234bb55b7201b138e85096aa72cf7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-04_page1.xml",
+      "bytes": 205402,
+      "sha256": "0e30dc174c1aed6c647497bff7f0ed62d1d105a55c07ed146b959f0670f59f87"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-05_page1.xml",
+      "bytes": 202450,
+      "sha256": "0806378bbcfcf058f696393c47f7d440092d0cdcdabcdb1d1ec364f24eb67891"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-06_page1.xml",
+      "bytes": 211318,
+      "sha256": "fc7c20937ee5845bd9fbf405645da816343c69930e51476f2683c04f0d270cc7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-07_page1.xml",
+      "bytes": 205771,
+      "sha256": "8b9e7a22aa6331930685bfc57e879eef69224113a37770700eb194914e9c2795"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-08_page1.xml",
+      "bytes": 212167,
+      "sha256": "fa044d446d4d28af1f28ca18080f184c38afdf2310c0f9d1a842db2513d41ee9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-09_page1.xml",
+      "bytes": 212092,
+      "sha256": "56f47ad48dfa3f2908e9f7bd4b627190d10ad3c194b05a1f72356509582b9927"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-10_page1.xml",
+      "bytes": 205746,
+      "sha256": "b308511ee77a2b4c94c297f2bc01adafa76318ae24311344653e80e406250f73"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-11_page1.xml",
+      "bytes": 205400,
+      "sha256": "7ec978c4658c78520fce1e30c6b99d706dcc7633a73d5df74df072197271882d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-12_page1.xml",
+      "bytes": 202768,
+      "sha256": "33780f4802db7db086ec37bc8397f2f3724858554db3066d7e86e1bc5e656dbe"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-13_page1.xml",
+      "bytes": 211961,
+      "sha256": "f84abab60929202592c93745d5329d5c56d4c2a37bdb2d72fea6dd0ef364d442"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-14_page1.xml",
+      "bytes": 206072,
+      "sha256": "004fbb059f9a3b3a4761d1d6909f971b92fe583878c4febee6ec9b1496a5ab01"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-15_page1.xml",
+      "bytes": 212011,
+      "sha256": "f3a4ee36c3678e158f148b86b4a97718545d482a710461be8d98155f2ba57ca8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-16_page1.xml",
+      "bytes": 206106,
+      "sha256": "d6be113ef2f0d4689cc5132d589dd9b6d43b107dba012f032a843f6f8bc2ed2b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-17_page1.xml",
+      "bytes": 205772,
+      "sha256": "ad30edbcea1c32902e15d095d0806aef9ed4d236bb0ca8bb1ef3a5f8fa6d3ab4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-18_page1.xml",
+      "bytes": 205400,
+      "sha256": "2c298ce3be832224b19fa88eaf10e8422295bb1f33508289b089acdf1deb9c8c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-19_page1.xml",
+      "bytes": 202759,
+      "sha256": "a13d93a70d9e95015ff88a5ba2149f8b9055fcf16d703ad436848d72ef13f4a5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-20_page1.xml",
+      "bytes": 211905,
+      "sha256": "52e3a50d18e387f1bbe06f176aba9c9f9558908469f45f4c713f431eb28a8257"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-21_page1.xml",
+      "bytes": 204881,
+      "sha256": "163568a30c566010d454e4a8e84f0afd213b8fa0eb285e048f003fe23f7a63b1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-22_page1.xml",
+      "bytes": 210877,
+      "sha256": "1b4095506b482e1c8192c7615817e763729415fd7fcb5b299d6f7f2e4fde84f6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-23_page1.xml",
+      "bytes": 210837,
+      "sha256": "22e7a3262ed2d8c5fc514dcb89f25887a7e09103366c2715f2eca9782b9ece31"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-24_page1.xml",
+      "bytes": 205769,
+      "sha256": "fcc3dba1c79fea0ab94738622df3febb5f2c1ed7c22f53ddc39bccd27d51832d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-25_page1.xml",
+      "bytes": 205405,
+      "sha256": "657c32a10044fef8d56a958e7f94e7adb346b02065e98408f3bcf176ceb5829f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-26_page1.xml",
+      "bytes": 202778,
+      "sha256": "eda218e667eb3c5cdbee443377556459ed07a654dfa9b42bb32f8cbbdda577ff"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-27_page1.xml",
+      "bytes": 211945,
+      "sha256": "c52b196102d32bf7783764aaa8aa096efd380a85da595cfe80f73ffeaacbfd72"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-28_page1.xml",
+      "bytes": 206063,
+      "sha256": "588477e2dd9e07cc1fb8d9fd363732957bd46d5d16e45383a757e26a8669acf8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-29_page1.xml",
+      "bytes": 215536,
+      "sha256": "acdca89ebf914532bce9dfeb5e32963768da00d6a1ce58ce08ee62bf7cc5d086"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-30_page1.xml",
+      "bytes": 212058,
+      "sha256": "ae0066fc5c3cb1ddbff943098c93f2380be7ff6930c22c1feedc524078af8adc"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-05-31_page1.xml",
+      "bytes": 209248,
+      "sha256": "d538de6b589c493f2fdb15c5bfe654098dcc1f5ba77940abdbd20271e0481c41"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-01_page1.xml",
+      "bytes": 205970,
+      "sha256": "226cf5c31e9033ea82109cbf12f676b0e1bab6020efdcee8e28aeb2c88413697"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-02_page1.xml",
+      "bytes": 206324,
+      "sha256": "0246460218365dc83d8b38d9be7764760a6dd31382f8550f47d63a81d94086ec"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-03_page1.xml",
+      "bytes": 215198,
+      "sha256": "24e06e7ea132cf4b9a8f48ae964e4eaf2ae31dcc1bb8017dd93637ad6eec9e35"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-04_page1.xml",
+      "bytes": 209341,
+      "sha256": "f975946f06b56ef89bbb5f263d3d70b356d1a92b1bbe333bcd143057594d3014"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-05_page1.xml",
+      "bytes": 215633,
+      "sha256": "e3e5c2c69b2b0bfcf5bc6778650491bfb5db47b3cee40def372cb99acf344cd1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-06_page1.xml",
+      "bytes": 209321,
+      "sha256": "fdbc19adaf59e6fb9b935f30565d34a1a8bba9017f469e9f9c83dea3e646ad33"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-07_page1.xml",
+      "bytes": 208959,
+      "sha256": "5e214cd5e553cf108ffba471daf3f1ab95d95e2867f85bfd450bcf82798743e4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-08_page1.xml",
+      "bytes": 208928,
+      "sha256": "48040924eb7f39e9867d13a1b1d51d06614d5f2547d110e6702e125a39b29224"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-09_page1.xml",
+      "bytes": 206302,
+      "sha256": "b7f1c656b328b22370d77984725e7685263c819e3b49903a42ae7756817cd24c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-10_page1.xml",
+      "bytes": 209606,
+      "sha256": "de50b3f06b2b1db3c6a5527b6371d092e9987d07eba8b0c2fc4f69e1c648b178"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-11_page1.xml",
+      "bytes": 209641,
+      "sha256": "2a1107b71ad0b1a47b1dc4e4657538c49fa7468e82ae74c65064bc73a151a2bb"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-12_page1.xml",
+      "bytes": 215635,
+      "sha256": "3d4cafebff377f06285e36c1733e0afa42051ec3262f375e337888104bf77e86"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-13_page1.xml",
+      "bytes": 215580,
+      "sha256": "521c135f3cab7ba02f73100055394382b4c25207c25d4ab365b7a440a0d2d214"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-14_page1.xml",
+      "bytes": 209330,
+      "sha256": "1e93988c1f529824a30f0ad9b5bbfb835a936245422d41830dc83d2fb15f9a22"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-15_page1.xml",
+      "bytes": 208954,
+      "sha256": "43a0689d635ee912c0adeb07becc6761593fd4507c6ede8210eea699455ef51d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-16_page1.xml",
+      "bytes": 206322,
+      "sha256": "4feef3581fde0acd7a49ddfd6bc36d193e10c8a963e18e044bcaa45f7d7a2350"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-17_page1.xml",
+      "bytes": 215482,
+      "sha256": "415137d308ae236953efc05fbbebeee79e4da96b07fb2e8625936d981049de71"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-18_page1.xml",
+      "bytes": 209616,
+      "sha256": "4f9002f1f7c9d4c07f924f1e41a0ae56aa1e3021aa94a9902626c81be0d01a2f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-19_page1.xml",
+      "bytes": 209679,
+      "sha256": "671ccdcc9068de01dfdf8f5c8e448ca04ad808e40c653daf2510e71291a06bf0"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-20_page1.xml",
+      "bytes": 209664,
+      "sha256": "eb6aa7bd821c5c3757102ed74e0c8159aa97b39c7324348b61db00d280d7ad2a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-21_page1.xml",
+      "bytes": 209306,
+      "sha256": "405ddb28512b6dfad38690c1437994205caf35073b69a25851ea46e7b7de8d64"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-22_page1.xml",
+      "bytes": 208944,
+      "sha256": "f68194a3e4482f596395240162e21de76d5c6155bc7bc8e396ad11ccc1d3df08"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-23_page1.xml",
+      "bytes": 206318,
+      "sha256": "e15b1be1fa5626a0bd14bde7827f4512d933bbc4ff9df4b92f054c39e4387e1a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-24_page1.xml",
+      "bytes": 209593,
+      "sha256": "09b24109c452f426f01dd59117f038f96dac499736d0cb1e4399195bc9a10ea3"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-25_page1.xml",
+      "bytes": 209615,
+      "sha256": "ec6b620319f1e9f1b6dd388a75b010d2a2f30b39b2dc8a9b35c33463e7f90276"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-26_page1.xml",
+      "bytes": 215296,
+      "sha256": "d4ecd18c9f4ca2a97db951af65eec6b9b72887b861139153dc3af3adbd16af4f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-27_page1.xml",
+      "bytes": 215248,
+      "sha256": "2ba88f1e107d61da7c38fa1eec86635447836218c73d0872f09bdbb47cc2daf0"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-28_page1.xml",
+      "bytes": 208988,
+      "sha256": "3e111dfe01d3c7b675faac654028df00b3fcc9c384ddc08d634acd55bdc6d98a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-29_page1.xml",
+      "bytes": 208593,
+      "sha256": "405f91a4db915caf06afe52cfd6e651fc054c97a78c92ab519f466cf54c7fcb9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-06-30_page1.xml",
+      "bytes": 205963,
+      "sha256": "30088c7b9f79797bf6ff6d25bc0743595aace84ac59dfa09b310e8b6a34a7f4e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-01_page1.xml",
+      "bytes": 215128,
+      "sha256": "d14971fa87b4f3f949140985991e8e74e5877a463ac835d12ccb4f8bf497f3ef"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-02_page1.xml",
+      "bytes": 210384,
+      "sha256": "2f52ef6427523c2606c053b6d70f9a472cdbb718fe6d9a4512be9ac20afeb3de"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-03_page1.xml",
+      "bytes": 216389,
+      "sha256": "4a9075f1bde1bfb9c2ff6385b8d7444efb952f1735e32341bbcf4db7236445e2"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-04_page1.xml",
+      "bytes": 216307,
+      "sha256": "3e3e0b64e6172ce7027e0c3c2eb499e75866ff5b1590d4d4fc51d16816c6b684"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-05_page1.xml",
+      "bytes": 210035,
+      "sha256": "7160649efe47f4e114cb2f1287ae97d8259ea4d8669b827e1d9d607c855db9b6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-06_page1.xml",
+      "bytes": 206749,
+      "sha256": "0d9e7ebb4b8c54e083ef4109dcb004b497b4b0f93f3f7e38f7831a6849fa84de"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-07_page1.xml",
+      "bytes": 207072,
+      "sha256": "9a2a61c6adc1e05486d96547f2923dd887debdbe79fdbd6e950b8d03ed5e4ed6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-08_page1.xml",
+      "bytes": 216238,
+      "sha256": "bc1ac4c0faf1082f02a01cf55866e6f3ca44089cd7057ea6448cf019db05dcef"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-09_page1.xml",
+      "bytes": 210404,
+      "sha256": "c8836afc071972683e4478726a9713408255336f56d3a59804d96c6fb23f1f79"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-10_page1.xml",
+      "bytes": 216439,
+      "sha256": "41a12e9dbc67b65444daea5522c05232e7ef7a25d13a4605f7d359029362a726"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-11_page1.xml",
+      "bytes": 216339,
+      "sha256": "1107a4ca61ba861cbb8767971eb5e2bdff839b299897699c58de4fe4e163c2e9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-12_page1.xml",
+      "bytes": 210062,
+      "sha256": "b6911c774ca9629cc3bd3028278f1c53a65ab97467658be4b3d0df9503b2c215"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-13_page1.xml",
+      "bytes": 209714,
+      "sha256": "688358c8b1de4685274151c515c890572b63cd6067dad2cc8a24b0ca1891dccc"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-14_page1.xml",
+      "bytes": 207076,
+      "sha256": "582a353abce552625fd21e5a54a8b02c952119d9b0ea7f6192abc1dd3fa729e0"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-15_page1.xml",
+      "bytes": 216240,
+      "sha256": "dde001df9a1e4adc8d2023b2bfb5563d8a82cbf7194a1e910d2cf67d5daf8ea4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-16_page1.xml",
+      "bytes": 210421,
+      "sha256": "724d0e925a6e4e1605949d56294e71b90a2d422a58544eb0a879c2ce20778695"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-17_page1.xml",
+      "bytes": 216410,
+      "sha256": "9be94928beab7adea77cbe683fa1b201fabeb1a6e590f9f343d25ec5b5e9efa5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-18_page1.xml",
+      "bytes": 210399,
+      "sha256": "e43bea35824f7ba3d9ddd154be8be9473cf4e803266d49d5399f6f5894ee2aeb"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-19_page1.xml",
+      "bytes": 210052,
+      "sha256": "9d2258d027aeb395a05b59f6be65c0a88b1fe40b864e734343deb734ca765bc7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-20_page1.xml",
+      "bytes": 209724,
+      "sha256": "b1dab7171b62b7c2ed481bb3c3e13ad9add69f46526b205f49c0f1c4d8bc4894"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-21_page1.xml",
+      "bytes": 207062,
+      "sha256": "29724b5c733f9aab5719ec73cef8b041f9be54540de4541156427e9708c27c20"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-22_page1.xml",
+      "bytes": 212799,
+      "sha256": "140122bfce4bc79efbe1a0075890387f3bc56bc3ad243afd8a110f7a3ca4f7e7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-23_page1.xml",
+      "bytes": 210405,
+      "sha256": "35ef888f4252417a2b1abe4cf05f6eafa5c7a4f787885f6d306718ae2b0bf958"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-24_page1.xml",
+      "bytes": 216412,
+      "sha256": "7269152e9f48b566bd5ea56985e82961e2d6de0ad2b7d8c8fb58a060cd11186b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-25_page1.xml",
+      "bytes": 216360,
+      "sha256": "03fa2c8c955cb6b896c39efc69f681606c1c9ba818c8cca529529a2dae0760ce"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-26_page1.xml",
+      "bytes": 210101,
+      "sha256": "c4bf99f082274718e1e1d3a81c0621f1737564a61ed4933d5959e9c6ba6c1359"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-27_page1.xml",
+      "bytes": 209719,
+      "sha256": "340460f53c792569e13cb984b32b00e3b41cb6f539ee4e304e9225fa5011b540"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-28_page1.xml",
+      "bytes": 207079,
+      "sha256": "3738998fe74b567fe96616dd75532f2ecff9e3cd5b662ad3008531f25ea98d50"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-29_page1.xml",
+      "bytes": 215585,
+      "sha256": "699a5b7d84f3b550d659c77d43f6553e4107944c67076c2c20eb3287c8b37d6f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-30_page1.xml",
+      "bytes": 209734,
+      "sha256": "58c8a70b408ffb05049b9fbdbdc221083fc1edfb8ca4623492586876755d90d5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-07-31_page1.xml",
+      "bytes": 216079,
+      "sha256": "1384f7b5c461bb3b33039daa334c95f8fddf880095aa11f15211b09ee69caabe"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-01_page1.xml",
+      "bytes": 215998,
+      "sha256": "ed02f9095823386a066ab220512c3bc2a37ba11b5add7e95ce5c3d6768e7db19"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-02_page1.xml",
+      "bytes": 210074,
+      "sha256": "355272d3f9433c179d3ca03ea3eb255e480d4bf826e7de57b6906ae61943edce"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-03_page1.xml",
+      "bytes": 209713,
+      "sha256": "d2a3f88aee997224cfe481073962fcecdff68b5702cefce69f2722047625a22f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-04_page1.xml",
+      "bytes": 207089,
+      "sha256": "d72d8f9b77d98e762527a29e5f8e038edcb85958050113efa167d89b8537dd26"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-05_page1.xml",
+      "bytes": 216270,
+      "sha256": "2d2f52d0f09861ab03058fd310f43856d7c1c60cf51087aacfe6682170b4ac54"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-06_page1.xml",
+      "bytes": 216348,
+      "sha256": "1c9120f3987215c31a54aede33ee6f63d23bb2458142be41f32c943fec61e499"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-07_page1.xml",
+      "bytes": 216406,
+      "sha256": "28f2f343214105e2f2cb28b9983f248029667e0d3fa9fc4ea7fafe6700bd68d5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-08_page1.xml",
+      "bytes": 216323,
+      "sha256": "5b87635aec3395d263f233d301f4048e7289a14cc825455b431e42e79faa3da3"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-09_page1.xml",
+      "bytes": 210072,
+      "sha256": "069683626d724375bc163052edfc850f9ebe0fd163e1e41d84107f1121246a05"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-10_page1.xml",
+      "bytes": 209710,
+      "sha256": "247080e76dec45ba488cf62e7343942ba56141d858e3e5c18c741f3df475219f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-11_page1.xml",
+      "bytes": 207095,
+      "sha256": "da0be4476b388f9a2737c5497193d1879d1c772e130cae1f632b84f8a9c7012b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-12_page1.xml",
+      "bytes": 216266,
+      "sha256": "284a74f226279950158d436e6231ed33e21cb27e8b13f8029bd8a913addd9910"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-13_page1.xml",
+      "bytes": 210390,
+      "sha256": "4aaf83bbe26b296c891deeec70b1470a66f115b886e1788ed238920f13c06e54"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-14_page1.xml",
+      "bytes": 213509,
+      "sha256": "6f9911aeb5a7fd1a508c32abadc9e50eac801fbe1a1781b0e8dfce13a2139a6f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-15_page1.xml",
+      "bytes": 216093,
+      "sha256": "c8890b8322e02230c22d72b0ddf3a43a65e98f991f038a07883f1c41da0c217f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-16_page1.xml",
+      "bytes": 209780,
+      "sha256": "204ed78cc3f844203c0ed5b692e07c9dc85f8158605fbb8f62c3bb72a41c7335"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-17_page1.xml",
+      "bytes": 209728,
+      "sha256": "7612db531536a6cb9f6887505356371fb9ca5aeb2036e8c4c66f71c5570c5637"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-18_page1.xml",
+      "bytes": 207101,
+      "sha256": "2ac6c963ee8d10be84923670025d8947df64770aa86e0ad417a91c3c2374c292"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-19_page1.xml",
+      "bytes": 216587,
+      "sha256": "b50feca319cddc4bd60d394d8c38ad99392a9254286ae4e63281fd6486aa6215"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-20_page1.xml",
+      "bytes": 210727,
+      "sha256": "0398b7efa8d5d0daaf3fc651b84566ba70eb7add5784a44e7f266b0da875ab2e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-21_page1.xml",
+      "bytes": 216756,
+      "sha256": "2749c0cd0f064b08913af6cd4d5d17fc261fa77ce9d01895e2f216e5b426b3c0"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-22_page1.xml",
+      "bytes": 216682,
+      "sha256": "11a5920feb9ded265b614e182e40c991ea68fcc1757ffbd4aff849bd8198b52f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-23_page1.xml",
+      "bytes": 210420,
+      "sha256": "db5984b8658fea364e8ec030e5ce8cf810f85803dd03cae096cf717e2bedd429"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-24_page1.xml",
+      "bytes": 210062,
+      "sha256": "7c31046d543f564041ad8344e1a1661f4336b4c06c4bd6436cd3843fa96f78cd"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-25_page1.xml",
+      "bytes": 207429,
+      "sha256": "1770ade3a7a9be9ee1d11c8e404e8b6d25897e07e6d8d770a0ec536322534655"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-26_page1.xml",
+      "bytes": 210030,
+      "sha256": "9060646f7a6fee690c94da9cab48f76b5168c3a867988fc4e794d995555adb34"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-27_page1.xml",
+      "bytes": 210080,
+      "sha256": "e0c2f49489edc0cee1da8c438693dcb79ea9c9091bdf718fa6781d117c81ea73"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-28_page1.xml",
+      "bytes": 216113,
+      "sha256": "1d32a2727c907215170f78b031df81009359aca7287418705b36cd2b7fc5eb80"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-29_page1.xml",
+      "bytes": 210134,
+      "sha256": "dc7632059365bce5e77e096ad56654e3365d3a71086bbd5d14a06552edebdad1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-30_page1.xml",
+      "bytes": 209748,
+      "sha256": "b46bc935b472794b39151c3a3f1a9e68f3b2d91a2fd7039d1610b85233c920fa"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-08-31_page1.xml",
+      "bytes": 210055,
+      "sha256": "945369da77f4a27a3e0bc4c7330eeef516297ee2cc982f258287213f85ee60ec"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-01_page1.xml",
+      "bytes": 207432,
+      "sha256": "79ba6bf87779bbd977032c015588aeb6f676f09a4f3a6b3c659b316a50fa335c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-02_page1.xml",
+      "bytes": 210712,
+      "sha256": "b08c72cd73b611e33c3875dc2c03d7ae7994737d0ba051b3d17d3b602f46899e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-03_page1.xml",
+      "bytes": 210745,
+      "sha256": "04ab62d4153bdf555e40cf0df395bd96f5d973eeb9bac4d45c58365eb08c9e41"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-04_page1.xml",
+      "bytes": 216737,
+      "sha256": "2a0aa0c7abe3cab1aed13acb89524634584ab8b025d3f32d18a78e44461604d4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-05_page1.xml",
+      "bytes": 210771,
+      "sha256": "fac188aac4d32de48643a20bbe3368b17adf9e4695301b62d9f2ed054c01e1a8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-06_page1.xml",
+      "bytes": 210411,
+      "sha256": "cfe7f3d348f04c7b0fc5c4475e99715a2bd9df56ab85d7f835674827368715c6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-07_page1.xml",
+      "bytes": 210062,
+      "sha256": "4d3db139c82a51c89635cf7ccd7fec40744e5fdacd764e763a7dae47281c6975"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-08_page1.xml",
+      "bytes": 207425,
+      "sha256": "9d2ed69b12ae607c569ddf55f5fa27f0e5bf3fbfde5d98d0214d2e8ca5adc127"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-09_page1.xml",
+      "bytes": 216590,
+      "sha256": "a9fbe7ccfc244987fe5f1d05568c8028223025b5a360c21caea5f66dcdf6b462"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-10_page1.xml",
+      "bytes": 210728,
+      "sha256": "fadd1dbb751c5c0bb26d6e1674815e53699769158180b8e4852d9a4d82b84fba"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-11_page1.xml",
+      "bytes": 216436,
+      "sha256": "0e71f614ada7112ff8627e53ed0096bf739060c2d8a5af23b16f51e1f19ac368"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-12_page1.xml",
+      "bytes": 216368,
+      "sha256": "6b2b955ec80315aa5fdd687acbd38fd74e4635628e8e5706c859349771c509cd"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-13_page1.xml",
+      "bytes": 210406,
+      "sha256": "f91755504cb950136c76600846636b96beaa31dc1f29d9b36cc44f29fd67ee18"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-14_page1.xml",
+      "bytes": 210052,
+      "sha256": "7bb109cef1660dbc29674c49bdcb4f96b8ea80d68ed9a33c1cc8aa95f5d30698"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-15_page1.xml",
+      "bytes": 207424,
+      "sha256": "1c9a63777dbcf058be931323f6e7d325eeaa7382ae835d760c341e4ccbd1b61d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-16_page1.xml",
+      "bytes": 216564,
+      "sha256": "7fc7cec8aeb70e39c9aeb3eb8bae9114ffe15801fb89254e321954531fecee84"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-17_page1.xml",
+      "bytes": 210054,
+      "sha256": "044580780afa4e8c1f8b74804bc72ed475fcd7e02918c4026344c19ce9e3b96a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-18_page1.xml",
+      "bytes": 216131,
+      "sha256": "e533da7992327f0b074144777eb0809efe7702966b61f7a257cea44278d10c00"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-19_page1.xml",
+      "bytes": 213763,
+      "sha256": "03c939a8fc3bf26522aa2ec787414635687d817e86ec15fa0e98023100ded4aa"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-20_page1.xml",
+      "bytes": 206775,
+      "sha256": "df9bad002e19b183e5a6920397f397e31ef7316af56b59c930b3bc886eefc755"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-21_page1.xml",
+      "bytes": 207105,
+      "sha256": "7da89bf8af20d9495657a3849fc9ec6ef2a5bacf4c3c3faf2a2c5c0e19c83f8d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-22_page1.xml",
+      "bytes": 207422,
+      "sha256": "e63b17d0a125a3de4c5a26736d728e828a87567cbf57c171878b1d5bcd9c4280"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-23_page1.xml",
+      "bytes": 216598,
+      "sha256": "2bb50da0ddab62e069d8a221c0213f286f6eb9351b0fd0d5961097f5d695a785"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-24_page1.xml",
+      "bytes": 210761,
+      "sha256": "dc84b926b4b51117bd9efa6f427a9739f99749e99b31bc8c73767ff2c6ccf879"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-25_page1.xml",
+      "bytes": 216777,
+      "sha256": "c1516565b75d99ca3a69b746ac0aa38f4f16417eacacab9f1d020591305895ec"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-26_page1.xml",
+      "bytes": 216686,
+      "sha256": "6b3a72c21f6b905557603e3baab480bf943be69726f462d989c985bc798656e6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-27_page1.xml",
+      "bytes": 210416,
+      "sha256": "0a9d17ae2decb7f8d8804fe8a0fe8875129c15cddb270218b5cb09472001a698"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-28_page1.xml",
+      "bytes": 210056,
+      "sha256": "975b67a43b6b1bc3b8c89aed2ef80e84113d33e3a2abaf839917dc20787e8fea"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-29_page1.xml",
+      "bytes": 207429,
+      "sha256": "075517e65d1cd87053c7a93bcafd622f5d2370366498b4436b6133842052f502"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-09-30_page1.xml",
+      "bytes": 210701,
+      "sha256": "28071242ba7ee1bb0ac942b4f5b6e38484b292f866558dd39d9fdbbeda51c87e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-01_page1.xml",
+      "bytes": 210762,
+      "sha256": "ed0f1f7ed2d494b637b80f23d2b4b5766bdb95be1c7643aad66a6c5000bb20f6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-02_page1.xml",
+      "bytes": 216789,
+      "sha256": "f15fdd852a500f12238f7a88ca49fc01d8284628efec296ca04084eaf819a8db"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-03_page1.xml",
+      "bytes": 210472,
+      "sha256": "e132b90a020d44ce8103e9fff6339c62a71c248a8e9fefc51ca50a9fca6ac5c0"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-04_page1.xml",
+      "bytes": 210058,
+      "sha256": "36458524bb442e2153c02751da69e3f539401174bb8c8ddc27968eb1d16d1978"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-05_page1.xml",
+      "bytes": 207093,
+      "sha256": "b20959500e6e65768feb18a7c9fbd34b5fd95b13ac09d0ab5fb53dd55f87f80c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-06_page1.xml",
+      "bytes": 207109,
+      "sha256": "ffbdb9f6cc3e17f896ed4e4dc7efd505896b55d47ac3ca881cd692147de32ab5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-07_page1.xml",
+      "bytes": 207135,
+      "sha256": "e62e3fc410d010df030b371a47fbbeb0bf9217143943acc70df4554af4dc6673"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-08_page1.xml",
+      "bytes": 210110,
+      "sha256": "ba6de5a93768c292fa74448563bc6041b9913d1811593fe97f5ce793d3bd19c5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-09_page1.xml",
+      "bytes": 210081,
+      "sha256": "ca1fd643556f0816c8c40a9becaaf5c9e3d9536e37e52047e3cb03d5352827b6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-10_page1.xml",
+      "bytes": 207493,
+      "sha256": "fc7fbb61cb8e497efc40a6a6bfb9fea684b3fd77c64a4a26cade1851ba39aba1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-11_page1.xml",
+      "bytes": 216373,
+      "sha256": "4bfe59045eb0487f750516f2392683d69621773bebbf2b75c88401f64e13f67f"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-12_page1.xml",
+      "bytes": 208772,
+      "sha256": "2d845b04960a7acd3fc3736d37c7c5c5e5f8553353498ad56731e7c5e7c31f87"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-13_page1.xml",
+      "bytes": 206114,
+      "sha256": "a1f708bffbc5f6e9fe0adab4377d8d59f720e47efe670cccf72f71b8e159753e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-14_page1.xml",
+      "bytes": 215284,
+      "sha256": "5159c71c161d2d2e9cc630e3fc92c232c23d3daf30f8f8b0c7c6252b4d01ec06"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-15_page1.xml",
+      "bytes": 209417,
+      "sha256": "6c169c762a00f1114e2922713669057eb364ee0050342e73f739906a4e75df96"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-16_page1.xml",
+      "bytes": 215449,
+      "sha256": "c1b7b0220080870d238a40b76832596b850d942ec991f7686f02bb6e4882a0d3"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-17_page1.xml",
+      "bytes": 215387,
+      "sha256": "d4d29ab8b52bba93b1801bdccaa8dfd571320c02743b4d9f0b325d6ea8dd1f73"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-18_page1.xml",
+      "bytes": 210419,
+      "sha256": "87c23cec53e3c47b0a8acd0d9401ac1183f0a809b0a4da8bef1e0fec6776bdf4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-19_page1.xml",
+      "bytes": 210060,
+      "sha256": "0d6e9904fb579240c6cad35677f952c4e641d8854230ba61acf64e672558fb6d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-20_page1.xml",
+      "bytes": 207429,
+      "sha256": "4b67ea6df48b6ed02cf1f2622972274a29d6adde2930b3d22554ee6589afe5ff"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-21_page1.xml",
+      "bytes": 216578,
+      "sha256": "0fd74e7a61c1e7bf07e78e2b64598471a2d156ca0911a43f38ca3327b2ac9e62"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-22_page1.xml",
+      "bytes": 210720,
+      "sha256": "b3c5d25373a4d2e9dfc90b126670c9612046c9f7f590480721bbc535643c13fa"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-23_page1.xml",
+      "bytes": 216742,
+      "sha256": "53b507ff028a83894267f44cd13a0eb0b6e758ff433c27ebacb316ab8212c0c5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-24_page1.xml",
+      "bytes": 210774,
+      "sha256": "8773355a3ab56bb77aa268f03b371e5190c2735843e5159254b7ca86fb5ce702"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-25_page1.xml",
+      "bytes": 210378,
+      "sha256": "5dd9d58b49b0824f8f5f924fa8706f45d8e8c5eb9bc035afcb29ac78feb31471"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-26_page1.xml",
+      "bytes": 207102,
+      "sha256": "149ba2752d8754cae70f860b04d6dcee712fa824e2bfdaf8f1164864ee1879ed"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-27_page1.xml",
+      "bytes": 207426,
+      "sha256": "0ee2c6896a0047af7d26fd2a4f54f4b78603228c4c885f1d3a3fc21ad19369e8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-28_page1.xml",
+      "bytes": 216583,
+      "sha256": "33c7b4499ac975aaca33723f30de641288b01889c81f9d5927302b9aaab54403"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-29_page1.xml",
+      "bytes": 210744,
+      "sha256": "0855e5c7d1949bf1f60eaed91609a6c8e6b525fc50ab07157b311a4f6d1a9930"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-30_page1.xml",
+      "bytes": 216776,
+      "sha256": "c9a2062f6b70a35a0dbb2ba20d99b2393316d5e9ac3f41b7913e0d9a2e85e54d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-10-31_page1.xml",
+      "bytes": 216693,
+      "sha256": "372c380f13d2d86a7967f6a37f3418f66ace0e51eba629064abdb3c73c934434"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-01_page1.xml",
+      "bytes": 210421,
+      "sha256": "a2f6de054f236a4fd1f9fee198a189e304aa3723d3698342a514e79d2911eed2"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-02_page1.xml",
+      "bytes": 210049,
+      "sha256": "99342d38f7e230ff3728ef18d5545fc760934abd0cff41a08fa3a25ea4b527d5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-03_page1.xml",
+      "bytes": 207383,
+      "sha256": "356f6016a038a4f39284681529664a126e596f7b37ac56f52c3d4c09c2c9dca7"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-04_page1.xml",
+      "bytes": 216535,
+      "sha256": "1e49f9882204c686ca89d407a441fdda39cf5994d8b01d5623d244915646a7d8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-05_page1.xml",
+      "bytes": 216652,
+      "sha256": "8846a3a06662f0550e4c8881ac4e986c79fd9c63df2540fdf996c69dc444d5e4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-06_page1.xml",
+      "bytes": 216745,
+      "sha256": "3ada7e42969e4e7a4655f12c5f05b4084df55f4c0720b5e6fab8895d7c6d983a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-07_page1.xml",
+      "bytes": 216695,
+      "sha256": "6a6ca251d857ae34cfded4f9014b090a8f22c6619a00c956fddd79df8cbb6bb8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-08_page1.xml",
+      "bytes": 210399,
+      "sha256": "fed31d837434874c6d37116e3a08e46ef13f923fabc967be330653d83f9f0001"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-09_page1.xml",
+      "bytes": 209976,
+      "sha256": "af1d931adeed6c191d3a1c45b675dbda038ac01ebf736f6e322feed8072160e5"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-10_page1.xml",
+      "bytes": 207343,
+      "sha256": "9160ddde4f0f16a2c568fe03ea6ac5c34020b275a3996bee77d528ad1c7163e6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-11_page1.xml",
+      "bytes": 216494,
+      "sha256": "33e7323d63857e43ab49c10f3b0eb3643684eeb42a9e39ac07d4aa01742cb036"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-12_page1.xml",
+      "bytes": 210673,
+      "sha256": "af5be69484d97ff4b9a0e08ca1a2c6abb2ce1f42bd03437ab4955e06d512afb1"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-13_page1.xml",
+      "bytes": 216662,
+      "sha256": "b646f5b5a88a45c8b84355dae21862b6ee2dce9f39b23e08a9841ffb335af910"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-14_page1.xml",
+      "bytes": 216559,
+      "sha256": "5749d41718add4fe42ac13f0c500ddab9133f8d92688a6d10ca3f1e0dfbbe168"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-15_page1.xml",
+      "bytes": 210334,
+      "sha256": "8372b737a8524b79c84c24a42df76ba5a00ca6d44bd1e07710185b7f16486ccf"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-16_page1.xml",
+      "bytes": 209959,
+      "sha256": "a3da779ddb2162d9163e264c5b23cd9235498abe3387131933af23b81eb5654e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-17_page1.xml",
+      "bytes": 207343,
+      "sha256": "42d6273efe7967e69ff5d377dd3aeb91e7785715ac1956489e21540e2b7fcbd2"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-18_page1.xml",
+      "bytes": 216561,
+      "sha256": "ea536f1d2e65769b68de28f48424cfe72ff66966314aa7458b819c4be5956f6d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-19_page1.xml",
+      "bytes": 210404,
+      "sha256": "9cca6b0b3d93d37e3edef69c64572e358ff644050b6af01596c0ab75ff1e8a6e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-20_page1.xml",
+      "bytes": 210521,
+      "sha256": "81000152550afbd2898208ccd448596b60cb622650d37b022bc9e7b7d111fb67"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-21_page1.xml",
+      "bytes": 216751,
+      "sha256": "13f266385cbf1cdda4363dc432c18826b5875ea495ff7168e226cff33d3c4276"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-22_page1.xml",
+      "bytes": 216323,
+      "sha256": "c90c396ce1e8728356edf3a58907f6030e077b00983199ccdca37f6766621ae2"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-23_page1.xml",
+      "bytes": 210039,
+      "sha256": "fda731733cc72f2d86b4631c02ce0b9f613e8c3278e11d4dcac73c661e5ae72d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-24_page1.xml",
+      "bytes": 207413,
+      "sha256": "dba5e0c854dfb7e5b2a22eaafaf7dd112a4581625a0d7c508a8d0a2e018b659a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-25_page1.xml",
+      "bytes": 216593,
+      "sha256": "5b212df0f70a9f0a361b598db3b280a2dd34dfb4e0e37c3a024cc705dc8c47bf"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-26_page1.xml",
+      "bytes": 210725,
+      "sha256": "eb582927a23a9f2b2b239e1f55a69d837f9f1f6d8b7b099c7a18b8f2a2e75341"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-27_page1.xml",
+      "bytes": 216740,
+      "sha256": "fce6c40378152b92cc33cf479897c84b322da1c1dfa0281add9ed2b80c6f788c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-28_page1.xml",
+      "bytes": 216675,
+      "sha256": "0c43f1b51ce499df2677712453309b38f1589c495ac11b5ab160a02b1f7800e0"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-29_page1.xml",
+      "bytes": 210394,
+      "sha256": "580d0302c3dd30fe4138b8789e33fb323555ad3920dbf9728185d3035d8971e9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-11-30_page1.xml",
+      "bytes": 210037,
+      "sha256": "3318a414c6af4ea6a2a06259332001fcfb6a7fb5db57c7b803ee51cf57a89ce2"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-01_page1.xml",
+      "bytes": 207418,
+      "sha256": "2c8a2419aa3c6bb7b22c0e62a820a9744349e10fd71e6a6d216168e47608918a"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-02_page1.xml",
+      "bytes": 216572,
+      "sha256": "8242dfd755a8de18533c8a7fcea021d565511a16577341304aa2d92d9fd72d32"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-03_page1.xml",
+      "bytes": 210705,
+      "sha256": "7848d147429196935f160e2eabb9bdfcc75f9e4b8997fea85d90741337e9986b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-04_page1.xml",
+      "bytes": 216729,
+      "sha256": "fb7b3a23882a10c61ad2951de81b537c2d1e5899e5411bfbc992ded3f72f522b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-05_page1.xml",
+      "bytes": 216659,
+      "sha256": "2e464cee55056376b19c9a561c69b873da602db15358ada9b08ceadf68ce0180"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-06_page1.xml",
+      "bytes": 210405,
+      "sha256": "ede15b37990c2330b1d219108560e78120d99fc581634dda9b1b5c18fc196f23"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-07_page1.xml",
+      "bytes": 210047,
+      "sha256": "058445d972f95934488e5ff206143b3c1596f65b78319de6e3493b02fb3cbdfa"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-08_page1.xml",
+      "bytes": 207421,
+      "sha256": "7b86d25ebbd382dcf12a7b0b79dbf6fe633f844b7c8d39515b95c7fb2390b27e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-09_page1.xml",
+      "bytes": 216552,
+      "sha256": "4325204c70d48372d3f2cf581d9c3113293a28ae09d38e53addbc3aeb5cac42c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-10_page1.xml",
+      "bytes": 210671,
+      "sha256": "ae6cae7fc5e15a1b1d89511cc3e4e57d0c5ac9e8b60bcc530279241331e4db94"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-11_page1.xml",
+      "bytes": 216730,
+      "sha256": "cf3020a8f40c32fa98b324578183f51f6527550d83d71d1a88a50d5b6a39d04d"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-12_page1.xml",
+      "bytes": 216660,
+      "sha256": "6cbd66cefbea118ea4a8dc574d40e59295fbc83682da750371d48fafebac7487"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-13_page1.xml",
+      "bytes": 210390,
+      "sha256": "4b878168678d4ed15b17c412579fb04c3020b9e74c8583b7752edb37ee9e28bb"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-14_page1.xml",
+      "bytes": 210048,
+      "sha256": "85be0dae77bddccc7bc7a6367ff23336a1271e0f48f7567319c48525ddd04e4c"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-15_page1.xml",
+      "bytes": 207405,
+      "sha256": "adec47759b2468cd39d3b7b11915694a81b4cc1fcd5ce91abf5a454f747a61d0"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-16_page1.xml",
+      "bytes": 216558,
+      "sha256": "be9ba03161dba049e294fe844f75b30031378beaf4c5efd05c37356b45461b47"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-17_page1.xml",
+      "bytes": 210723,
+      "sha256": "5879c17daca8f57c35011fe04189838ef5092e9790091eb30558a98c0b993797"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-18_page1.xml",
+      "bytes": 216734,
+      "sha256": "0e5fc371eeb6cda3c91c8082c1611d6c1eea3712e8bc4737f39dcd8a0e61a9f9"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-19_page1.xml",
+      "bytes": 216613,
+      "sha256": "1b7c230ff6f05189cfcf4f2a50ea2308343eca93be5d580577e1e8cb3a494bb4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-20_page1.xml",
+      "bytes": 210365,
+      "sha256": "a0233a77a278468c6c616d7024576d31280fc702d19892fb8061340c153644d3"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-21_page1.xml",
+      "bytes": 210037,
+      "sha256": "6ef825b8ac4a4152a4653684cd9ebf8b5a8468eec809d45636955ef41605e6a6"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-22_page1.xml",
+      "bytes": 207417,
+      "sha256": "a7c2af11f5a234da5d04ef7448740d3c56982e70a5d72849680b6d71ebe98ac4"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-23_page1.xml",
+      "bytes": 210754,
+      "sha256": "9705c96c1704102acb584e55663ec955fd4d9d0c5571fcd1518f5f2faa4650cc"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-24_page1.xml",
+      "bytes": 210793,
+      "sha256": "248016e7ff3df539a7b807471eb80fb67b889e8ed2c55ce1b0094d273198ad9b"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-25_page1.xml",
+      "bytes": 216375,
+      "sha256": "5205780db8bf245f48b2cbcbaa777ce883b539482265082f0a9696e7741a7cde"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-26_page1.xml",
+      "bytes": 210454,
+      "sha256": "bff92c5660dfb41b0c2edc2583cb5b285a71b71207fee86781be9ca38d349464"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-27_page1.xml",
+      "bytes": 216340,
+      "sha256": "28ba4c9b29a45ab4905f1d280455ba17ab4a1a3e63f35a63eae1613354fc4bd8"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-28_page1.xml",
+      "bytes": 210043,
+      "sha256": "1650dda262f1ec11f7e5a8812915fa605d0c41e0ab5ef249124bfe5d5d3b9b0e"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-29_page1.xml",
+      "bytes": 207437,
+      "sha256": "ffd200d54f8f1ec0fd8fd3d9f5f472760287b1d18b03bc9fd6a5b96dee031578"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-30_page1.xml",
+      "bytes": 216700,
+      "sha256": "9bd291a4a9d62437089daf3e1fc487a6b79ece48d3ae15729da6c27d5733e072"
+    },
+    {
+      "path": "data/raw/hasu_api/2025-12-31_page1.xml",
+      "bytes": 226269,
+      "sha256": "e49e89eeea21e5316b876b0f871d9c9f0913ce5f328d86b6c673dadc2fdee06b"
+    },
+    {
+      "path": "data/raw/hasu_api/2026-01-01_page1.xml",
+      "bytes": 220686,
+      "sha256": "7a310e83ed935f6b5b602c6f519e959494caddba5f60b4a67b5822908319af7e"
+    },
+    {
+      "path": "data/raw/hasu_api/2026-11-12_page1.xml",
+      "bytes": 216575,
+      "sha256": "cbf6ef4efe61b602f5303df21a6a66c14d7b0c6d9b0326bfe31ebc18594028c2"
+    },
+    {
+      "path": "data/raw/hasu_api/collection_2025.json",
+      "bytes": 344562,
+      "sha256": "cfff32bf190dc4d962ae67bb651fce9d9bf3b2726bf912b2831e410eab0d730a"
+    },
+    {
+      "path": "data/raw/hasu_api/probe_metadata.json",
+      "bytes": 2511,
+      "sha256": "b884eb9c36c155ace1f36eb48a588ff9c12a4213072190723a448dedfbcd4d42"
+    },
+    {
+      "path": "data/raw/hasu_api/swagger.json",
+      "bytes": 11187,
+      "sha256": "e7cd19601ebe7a0f43ef1045a2983dd0d078ba9164e7e914331c813aebdded57"
+    },
+    {
+      "path": "data/raw/hasu_portal.html",
+      "bytes": 202514,
+      "sha256": "47953794b18a7137f05756d445771462329fb4e9f8f20ee11364d3ed9478580f"
+    },
+    {
+      "path": "data/raw/pipes_portal.html",
+      "bytes": 210319,
+      "sha256": "6114f6640eab75007c97155a50c29afacc79191bfc88b1d581061707cf56ec37"
+    },
+    {
+      "path": "data/raw/portal_download.js",
+      "bytes": 14556,
+      "sha256": "60b1339508c71a56b64321403b9498d4078a5a6557b31b7fb1190fdd35a39b51"
+    },
+    {
+      "path": "data/raw/portal_download_response.json",
+      "bytes": 10815,
+      "sha256": "6a6cc77b087cd3afee997162d5d5eb094abb9020f0c121fdba55cb526c4a3486"
+    },
+    {
+      "path": "data/raw/sewer_portal.html",
+      "bytes": 168458,
+      "sha256": "c4faa31f3294d49135a3bef146fe30dba3aa6c69b6f7eb77430d76a78722fe62"
+    },
+    {
+      "path": "data/raw/source_inspection.txt",
+      "bytes": 48014,
+      "sha256": "c1203849685b3aa33ae8c61a0423b1581da58873067734fa9f614d9c51a8330e"
+    },
+    {
+      "path": "data/raw/statistics_2024.xlsx",
+      "bytes": 25733577,
+      "sha256": "9e7eefe9bcab809a055b2f1749aeca9ab7969aa275bfa3bd4ad9a52e99a60cab"
+    },
+    {
+      "path": "data/raw/statistics_2024_catalog.xlsx",
+      "bytes": 25699263,
+      "sha256": "a80e88b5d2a01d07dec1970e065d0952db7e638efa782d229da6af4be7bf6a32"
+    },
+    {
+      "path": "data/raw/statistics_2024_page.html",
+      "bytes": 300326,
+      "sha256": "72035a0c07f16a181c9809dcd2ab52d192d2bdc7a85d4b902be713b07f96a664"
+    },
+    {
+      "path": "data/raw/statistics_2025_catalog.xlsx",
+      "bytes": 25624247,
+      "sha256": "30095746df0d210c61a0dd2ee452512c5a8778131ca908bb6c5266a6e2a3e287"
+    },
+    {
+      "path": "data/raw/statistics_catalog.html",
+      "bytes": 317835,
+      "sha256": "1dd4fd79449b60b5201bc256d19aca8ade843d69ec9c98c0db20edf13a42f9c4"
+    },
+    {
+      "path": "data/raw/대구공공시설관리공단_하수관거 및 관로 현황_20260101.csv",
+      "bytes": 4838,
+      "sha256": "47c69a646beb82e7f86fe4fdc3678a444aa2784ee9e41cbe5422e4eb4b3fe824"
+    },
+    {
+      "path": "data/raw/한국환경공단_공공하수처리시설 현황_20251231.csv",
+      "bytes": 1892563,
+      "sha256": "51d324ce8d7fdc73881ae59cc84fcde76cb582d6a09a7ebec3dc59c6e8601513"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 년도별 하수도 요금.csv",
+      "bytes": 621,
+      "sha256": "e23baac3aced6e0a3ae7cda161a37f4ff213cddf0f4b4ade9793c8aa148ec3ec"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 시도별 하수도 보급율.csv",
+      "bytes": 1409,
+      "sha256": "d47d3b6fe26c5e6aace4b28777d4534c5dae8fed1e1ff219e54ab26d10bb6222"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 시도별 하수도 요금.csv",
+      "bytes": 5382,
+      "sha256": "1ec45141f0d78decaedf0f15f42ad170c89859443b39e84896f29bb6e2fd277a"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 하수관로 년도별 시설현황.csv",
+      "bytes": 1409,
+      "sha256": "d47d3b6fe26c5e6aace4b28777d4534c5dae8fed1e1ff219e54ab26d10bb6222"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 하수도 보급율.csv",
+      "bytes": 1057,
+      "sha256": "90c7b1aedd7f071c1ab7c6aa9c7d7bb93fe4731e9c8eb24304d89562fe573461"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 하수도 세입 현황.csv",
+      "bytes": 1050,
+      "sha256": "e4b09a6c145e9e5ca8df137ca9a8d8a0044aec8b879b994170eb0b93cb7c680f"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 하수도 세출 현황.csv",
+      "bytes": 1692,
+      "sha256": "9e97af38214562e44cb19b72247901614c74fbfc2985acd0352709365021b641"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 하수슬러지 발생 및 처리.csv",
+      "bytes": 8486,
+      "sha256": "eeb34bc940e3dcc0740b1d3cc90e59ac1d320f8ec5596cb6f132790d4c3dbb1c"
+    },
+    {
+      "path": "data/raw/한국환경공단_하수도정보/웹사이트 하수처리수 재이용수.csv",
+      "bytes": 7161,
+      "sha256": "07cb6678d1c59ef66b12e5eaf01d309215b251d91dbfacb038732264f9658b9e"
+    }
+  ]
+}
