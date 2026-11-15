@@ -590,3 +590,24 @@ input[type=range]::-moz-range-thumb { width: 15px; height: 15px; border: 3px sol
 .nav-copy small { display: none; }
 .nav-link { min-height: 64px; }
 @media (max-width: 720px) { .nav-link, .nav-link:first-child, .nav-link:last-child { min-height: 61px; } }
+.simple-hero-number > .eyebrow { color: #B7DBC2; }
+.simple-message { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 22px; align-items: start; margin: 28px 0 4px; padding: 20px 24px; border-left: 4px solid var(--color-accent); background: #EAF3E9; border-radius: 0 10px 10px 0; }
+.simple-message > span { color: var(--color-accent); font-size: 12px; font-weight: 700; padding-top: 4px; }
+.simple-message p { font-size: clamp(15px, 1.5vw, 20px); line-height: 1.65; letter-spacing: -.035em; margin: 0; }
+.simple-message b { color: var(--color-accent); }
+.simple-cards-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.simple-cards-two article { padding: 31px; }
+.simple-cards-two h3 { margin: 15px 0 0; font-size: 21px; }
+.simple-cards-two article > strong { margin-top: 13px; }
+.simple-cards-two p { min-height: 0; max-width: 490px; margin: 19px 0 0; }
+.simple-cards-two article > small { width: 100%; }
+.simple-compare { display: grid; gap: 12px; width: 100%; margin-top: 14px; }
+.simple-compare > div { display: grid; grid-template-columns: 115px minmax(0, 1fr) 48px; gap: 10px; align-items: center; }
+.simple-compare span, .simple-compare b, .simple-scenario-label { font-size: 10px; color: var(--color-muted); }
+.simple-compare b { color: var(--color-ink); text-align: right; }
+.simple-compare i { display: block; min-width: 3px; height: 12px; background: #A7CDB5; border-radius: 2px; }
+.simple-compare > div:last-child i { background: var(--color-accent); }
+.simple-scenario-bar { width: 100%; height: 14px; margin-top: 30px; background: #DDE9DF; border-radius: 7px; overflow: hidden; }
+.simple-scenario-bar span { display: block; width: 10%; height: 100%; background: var(--color-accent); }
+.simple-scenario-label { display: flex; justify-content: space-between; width: 100%; margin-top: 8px; }
+@media (max-width: 720px) { .simple-message { grid-template-columns: 1fr; gap: 5px; padding: 17px 19px; }.simple-message p { font-size: 15px; }.simple-cards-two { grid-template-columns: 1fr; }.simple-cards-two article { padding: 23px; }.simple-cards-two h3 { font-size: 18px; }.simple-compare > div { grid-template-columns: 90px minmax(0, 1fr) 42px; gap: 6px; }.simple-compare span, .simple-compare b { font-size: 9px; } }
