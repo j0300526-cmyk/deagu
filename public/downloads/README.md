@@ -4,6 +4,7 @@
 
 2026 대구광역시 기후·환경·탄소중립 공공데이터 AI 활용대회 부문 2 출품용 분석 프로젝트.
 전국 4,556개·대구 39개 시설의 실제 2025년 공공데이터를 사용한다.
+핵심 질문은 전력이 어디에 집중되며, 수질을 유지하면서 어떤 시설과 공정을 먼저 진단해야 하는가이다.
 React + TypeScript + Vite + Tailwind + Recharts + Leaflet, Python/Pandas/NumPy/Scikit-learn/GeoPandas/XGBoost/SHAP.
 
 ## 실행
@@ -44,12 +45,12 @@ Vercel: 프레임워크 Vite, 빌드 `npm run build`, 출력 `dist`. `vercel.jso
 - `data/processed/xgboost_shap.json`: 대구 시설별 부호 있는 로그 척도 기여도·입력·기준값·예측 및 평균 절대 중요도. exp(기준값+합)=예측 원단위 검증.
 - `analysis/pipeline.py`: 전체 파이프라인. 네트워크 호출 없이 원본에서 CSV·JSON·보고서 생성.
 - `data/raw/`: 기존 제공 파일과 공개 원본, 출처 HTML·공식 계수 PDF.
-- `data/processed/`: 전국·대구 CSV, 품질·검증·모델·파일해시, 빈 GeoJSON.
+- `data/processed/`: 전국·대구 CSV, 품질·검증·모델·파일해시, 추정 위치 GeoJSON.
 - `public/data/analysis.json`: 웹 화면의 유일한 분석 결과 입력. 생성 코드 외에 수동 수치를 삽입하지 않음.
 - `src/`: 6개 분석 화면. 검색·규모·공법 필터, 시설 상세, 비교·가정 시나리오, CSV·보고서 다운로드.
 - `tests/`: 실제 데이터에 대한 연도 대조·계산식·보존·표본·누수·시나리오 검증.
 
-문서: [데이터 출처](DATA_SOURCES.md), [품질](DATA_QUALITY_REPORT.md), [분석·정책](ANALYSIS_REPORT.md),
+문서: [심사 요약](JUDGING_BRIEF.md), [데이터 출처](DATA_SOURCES.md), [품질](DATA_QUALITY_REPORT.md), [분석·정책](ANALYSIS_REPORT.md),
 [모델](MODEL_EVALUATION.md), [AI 활용](AI_PROMPT_LOG.md), [공공데이터 활용](PUBLIC_DATA_USAGE.md).
 이 README와 결과 보고서는 분석 실행 시 실제 계산 결과에서 다시 생성된다.
 검증 범위와 브라우저 검증의 제한은 [실행·검증 기록](VERIFICATION_REPORT.md)에 별도 기록했다.
@@ -60,7 +61,7 @@ Vercel: 프레임워크 Vite, 빌드 `npm run build`, 출력 `dist`. `vercel.jso
 
 ## 기능과 해석
 
-Overview, Facility Map, Energy Benchmark, AI Insights, Carbon Simulator, Policy Insights의 6개 화면.
+핵심 발견 → 시설 찾기 → 전국 비교 → AI 분석 → 탄소 계산 → 실행 제안의 6개 화면이다.
 전국 비교와 대구 분석, 관측·근사·AI·가정 시나리오를 구분한다. 모든 결과는 2025년이며 전년 비교만 2024년을 별도 표시한다.
 지도는 2025년 시설 주소를 2026년 SGIS 기반 행정경계의 구역 내부 대표점 또는 OSM 동·도로 객체에 연결한
 추정 위치를 표시한다. 이 점은 시설 필지·건물 좌표가 아니다. 공식 좌표는 아직 0개이며,

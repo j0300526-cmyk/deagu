@@ -6,21 +6,21 @@ import { AIInsights, Benchmark, CarbonSimulator, DataQuality, Overview, PolicyIn
 
 const FacilityMap = lazy(() => import('./FacilityMap'));
 const navigation = [
-  { id: 'overview', label: 'Overview', ko: '연구 개요' },
-  { id: 'map', label: 'Facility Map', ko: '시설 지도' },
-  { id: 'benchmark', label: 'Benchmark', ko: '에너지 비교' },
-  { id: 'ai', label: 'AI Insights', ko: '모델 분석' },
-  { id: 'carbon', label: 'Carbon Simulator', ko: '탄소 시나리오' },
-  { id: 'policy', label: 'Policy Insights', ko: '정책 제안' },
+  { id: 'overview', label: '핵심 발견', ko: 'OVERVIEW' },
+  { id: 'map', label: '시설 찾기', ko: 'MAP' },
+  { id: 'benchmark', label: '전국과 비교', ko: 'BENCHMARK' },
+  { id: 'ai', label: 'AI로 살펴보기', ko: 'AI INSIGHTS' },
+  { id: 'carbon', label: '탄소 계산', ko: 'SCENARIO' },
+  { id: 'policy', label: '실행 제안', ko: 'POLICY' },
 ];
 const pageContent: Record<string, { title: string; description: string; kicker: string }> = {
-  overview: { title: '대구 하수처리시설의 숨은 탄소격차', description: '공공데이터로 읽는 수질 정화 성능, 에너지 효율, 그리고 전력 간접배출의 관계.', kicker: '01 / RESEARCH OVERVIEW' },
-  map: { title: '시설의 위치와 운영의 맥락', description: '공개 주소를 행정구역·동·도로 대표점에 연결한 추정 지도를 실제 운영 지표와 함께 읽습니다. 점은 시설 부지 좌표가 아닙니다.', kicker: '02 / FACILITY ATLAS' },
-  benchmark: { title: '에너지 효율, 비교의 조건을 묻다', description: '시설 규모·처리공법·오염부하를 함께 고려해 전국 유사시설과 대구를 비교합니다.', kicker: '03 / ENERGY BENCHMARK' },
-  ai: { title: '모델이 설명하는 에너지의 차이', description: '대구를 학습에서 제외한 독립 평가. XGBoost 예측과 SHAP 기여도, 기준모델과의 성능 차이를 공개합니다.', kicker: '04 / XGBOOST & SHAP' },
-  carbon: { title: '전력 절감에서 탄소 시나리오까지', description: '2025년 전력사용량에 가정 절감률을 적용합니다. 실증된 감축 효과와 구분해 살펴보세요.', kicker: '05 / CARBON SCENARIOS' },
-  policy: { title: '데이터를 정책의 근거로', description: '실제 수치와 비교 기준에서 출발해, 현장에서 검증해야 할 정책의 질문을 제안합니다.', kicker: '06 / POLICY & IMPLICATIONS' },
-  quality: { title: '분석의 근거를 열어두다', description: '공식 출처, 결측률, 계산식과 검증 절차. 연구 결과를 재현하는 데 필요한 기록입니다.', kicker: 'RESEARCH / DATA & METHODS' },
+  overview: { title: '대구 하수처리시설의 숨은 탄소격차', description: '전력이 어디에 집중되고, 어떤 시설을 더 살펴봐야 하는지 공공데이터로 찾았습니다.', kicker: '01 / 핵심 발견' },
+  map: { title: '대구의 시설은 어디에 있나?', description: '시설을 선택해 전력 사용과 수질을 확인하세요. 지도점은 주소 기반 추정 위치이며 시설 부지 좌표가 아닙니다.', kicker: '02 / 시설 지도' },
+  benchmark: { title: '비슷한 시설과 비교하면 어떤가?', description: '시설 크기와 처리조건이 다르면 전력량도 달라집니다. 비교 조건을 맞춰 대구의 위치를 살펴봅니다.', kicker: '03 / 전국 비교' },
+  ai: { title: '전력 차이와 관련된 조건은?', description: 'AI가 예측에 사용한 주요 조건과 대구 시설에서의 예측 오차를 보여줍니다.', kicker: '04 / AI 분석' },
+  carbon: { title: '전력을 줄이면 탄소는 얼마나?', description: '원하는 절감률을 넣어 가정상 감축 잠재량을 계산해 보세요. 실증된 효과는 아닙니다.', kicker: '05 / 탄소 시나리오' },
+  policy: { title: '대구는 무엇부터 실행할까?', description: '데이터의 발견을 계측, 원인 진단, 수질 유지 실증으로 연결합니다.', kicker: '06 / 실행 제안' },
+  quality: { title: '이 숫자는 어디서 왔나?', description: '공식 자료, 분석연도, 결측률과 계산 방법을 확인할 수 있습니다.', kicker: '자료와 방법' },
 };
 function route() { const id = window.location.hash.slice(1); return Object.hasOwn(pageContent, id) ? id : 'overview'; }
 

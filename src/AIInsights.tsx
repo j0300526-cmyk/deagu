@@ -27,9 +27,10 @@ export default function AIInsights({ data, onSelect }: { data: Analysis; onSelec
   const anomalies = rows.toSorted((a, b) => Math.abs(b.residual) - Math.abs(a.residual)).slice(0, 6);
 
   return <>
-    <div className="model-banner"><div className="model-badge"><FlaskConical size={23} /></div><div><span className="eyebrow">EXPLAINABLE MACHINE LEARNING</span><h2>예측의 차이는, 더 살펴볼 이유입니다.</h2><p>대구 전체를 학습에서 제외하고, 타 지역 {fmt(model.train_n, 0)}개 시설에서 학습했습니다.</p></div><span className="tag teal-tag">대구 독립 평가 {model.daegu_n}개</span></div>
-    <Note tone="warning">AI 예측은 연평균 유입조건에 따른 추정입니다. 실측값·최적 전력사용량·달성 가능한 절감 목표가 아닙니다. 품질 기준에서 제외된 {model.excluded_n}개 전국 시설로 일반화하지 않습니다.</Note>
-    <ModelSelector model={model} year={data.meta.year} value={algorithm} onChange={setAlgorithm} />
+    <div className="model-banner"><div className="model-badge"><FlaskConical size={23} /></div><div><span className="eyebrow">PUBLIC DATA + AI / 2025</span><h2>AI는 전력 차이를 살펴볼 단서를 찾습니다.</h2><p>타 지역 시설에서 학습한 뒤, 대구 시설을 처음 보는 자료로 평가했습니다.</p></div><span className="tag teal-tag">대구 독립 평가 {model.daegu_n}개</span></div>
+    <div className="ai-steps" aria-label="AI 분석의 순서"><div><b>01</b><strong>전국 자료로 학습</strong><span>타 지역 {fmt(model.train_n, 0)}개 시설</span></div><div><b>02</b><strong>대구에서 성능 확인</strong><span>학습에 쓰지 않은 {model.daegu_n}개 시설</span></div><div><b>03</b><strong>예측에 쓰인 조건 설명</strong><span>XGBoost SHAP · 원인 판정 아님</span></div></div>
+    <Note tone="warning">예측은 추가 진단의 단서입니다. 실제 전력 측정값이나 달성 가능한 절감 목표가 아닙니다.</Note>
+    <details className="data-details ai-model-details"><summary>Ridge·Random Forest·XGBoost 모델을 바꿔 비교하기</summary><ModelSelector model={model} year={data.meta.year} value={algorithm} onChange={setAlgorithm} /></details>
     <div className="kpi-grid model-kpis">
       <KPI label="대구 평균 절대오차 · MAE" value={fmt(score?.mae, 3)} unit="kWh/m³" detail={`${algorithm} · 대구 독립평가 n=${score?.n ?? 0}`} icon={<Target size={18} />} />
       <KPI label="타 지역 교차검증 · MAE" value={fmt(evaluation.cv.mae, 3)} unit="kWh/m³" detail={`시설 그룹 5-fold OOF · n=${evaluation.cv.n}`} icon={<ShieldCheck size={18} />} />

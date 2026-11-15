@@ -1,50 +1,98 @@
-import { ArrowRight, ArrowUpRight, Check, Database, Droplets, FileText } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Database, Droplets, FlaskConical, MapPin } from 'lucide-react';
 import type { Analysis, Facility } from './types';
-import { DownloadLink, FacilityTable, fmt, Panel, Source, Takeaway } from './components';
-import { BenchmarkScatter, FacilityBars } from './charts';
+import { fmt, Source } from './components';
+import { calculateScenario } from './scenario';
 
-type Props = { data: Analysis; onSelect: (f: Facility) => void; go: (page: string) => void };
+type Props = { data: Analysis; onSelect: (facility: Facility) => void; go: (page: string) => void };
 
 export default function Overview({ data, onSelect, go }: Props) {
-  const s = data.summary.daegu;
-  const n = data.summary.national;
-  const major = data.facilities.filter(f => f.capacity_m3_day >= 500).toSorted((a, b) => (a.kwh_m3 ?? Infinity) - (b.kwh_m3 ?? Infinity));
-  const top = data.facilities.toSorted((a, b) => (b.electricity_kwh ?? 0) - (a.electricity_kwh ?? 0)).slice(0, 5);
-  const share = top.reduce((sum, f) => sum + (f.electricity_kwh ?? 0), 0) / s.electricity_kwh * 100;
-  const compared = Object.values(data.peers).filter(p => p.available).length;
-  const maxIntensity = Math.max(s.weighted_kwh_m3, n.weighted_kwh_m3);
+  const city = data.summary.daegu;
+  const national = data.summary.national;
+  const topFive = data.facilities.toSorted((a, b) => (b.electricity_kwh ?? 0) - (a.electricity_kwh ?? 0)).slice(0, 5);
+  const topShare = topFive.reduce((sum, facility) => sum + (facility.electricity_kwh ?? 0), 0) / city.electricity_kwh * 100;
+  const peerFacility = data.facilities.find(facility => facility.name === '화북이주단지');
+  const peer = peerFacility ? data.peers[peerFacility.facility_id] : undefined;
+  const rankFacility = data.facilities.find(facility => facility.name === '다사 달천');
+  const scenario = calculateScenario(city.electricity_kwh, 10, data.meta.factor.value);
+  const maxIntensity = Math.max(city.weighted_kwh_m3, national.weighted_kwh_m3);
 
   return <>
-    <div className="overview-bento">
-      <section className="bento-card lead-discovery" aria-labelledby="discovery-title">
-        <div className="card-kicker"><span>KEY FINDING / 01</span><span>ENERGY INTENSITY</span></div>
-        <h2 id="discovery-title">시설 평균과 도시 전체 효율은<br/>서로 다른 모습을 보여줍니다.</h2>
-        <div className="lead-stat"><span className="lead-stat-label">대구의 유입량 가중 전력 원단위</span><strong>{fmt(s.weighted_kwh_m3, 3)}<span>kWh/m³</span></strong></div>
-        <div className="intensity-comparison" role="img" aria-label={`2025년 유입량 가중 전력 원단위: 대구 ${fmt(s.weighted_kwh_m3, 3)}, 전국 ${fmt(n.weighted_kwh_m3, 3)} kWh/m³`}>
-          {[{ label: '대구', value: s.weighted_kwh_m3, cls: 'daegu' }, { label: '전국', value: n.weighted_kwh_m3, cls: 'nation' }].map(r => <div className="intensity-row" key={r.label}><span>{r.label}</span><div><i className={r.cls} style={{ width: `${r.value / maxIntensity * 100}%` }}/></div><b>{fmt(r.value, 3)}</b></div>)}
+    <section className="story-lead" aria-labelledby="story-question">
+      <div className="story-lead-copy">
+        <span className="eyebrow">DAEGU · PUBLIC DATA STORY / 2025</span>
+        <h2 id="story-question">어디부터 전력을 살피면<br/><em>대구 전체에 영향이 클까?</em></h2>
+        <p>하수를 깨끗하게 처리하면서 전력을 줄일 방법을 찾기 위해, 39개 시설의 사용량·수질·전국 유사시설을 함께 비교했습니다.</p>
+        <div className="story-lead-actions">
+          <button className="button primary" onClick={() => go('benchmark')}>비교 결과 보기 <ArrowRight size={16}/></button>
+          <button className="text-button" onClick={() => go('map')}>시설 위치 보기 <MapPin size={15}/></button>
         </div>
-        <div className="lead-explanation"><p>대구 시설별 단순 평균은 <b>{fmt(s.mean_kwh_m3, 3)} kWh/m³</b>.<br/>유량을 반영하면 도시 전체의 에너지 효율을 다르게 읽게 됩니다.</p><button className="round-link" aria-label="전국 에너지 비교로 이동" onClick={() => go('benchmark')}><ArrowUpRight size={22}/></button></div>
-        <p className="data-stamp">{data.meta.year}년 · 한국환경공단 · 전력 합계 / 연간 환산 유입량 합계<br/>지역별 규모·공법 구성 차이를 포함한 기술통계입니다.</p>
-      </section>
+      </div>
+      <div className="story-lead-visual">
+        <span className="story-overline">첫 번째 발견 · 전력 사용의 집중</span>
+        <strong>{fmt(topShare, 1)}<small>%</small></strong>
+        <p>전력 사용 상위 5개 시설이<br/>대구 39개 시설의 총전력에서 차지하는 비중</p>
+        <div className="story-share-bar" role="img" aria-label={'2025년 대구 전력 사용 상위 5개 시설 ' + fmt(topShare, 1) + '%, 나머지 ' + fmt(100 - topShare, 1) + '%'}>
+          <span style={{ width: String(topShare) + '%' }} />
+        </div>
+        <div className="story-share-labels"><span>상위 5개</span><span>나머지 {city.n - topFive.length}개</span></div>
+        <p className="story-topnames">{topFive.map(facility => facility.name).join(' · ')}</p>
+        <p className="story-visual-note">따라서 총량 관리의 첫 계측 대상은 대형 시설입니다. <b>전력 사용량이 크다고 비효율이라는 뜻은 아닙니다.</b></p>
+        <small>{data.meta.year}년 · 한국환경공단 · 연간 총전력 kWh 합계</small>
+      </div>
+    </section>
 
-      <section className="bento-card scope-card" aria-labelledby="scope-title"><div className="card-kicker"><span>THE RESEARCH SCOPE</span><Database size={18}/></div><h2 id="scope-title">전국을 기준으로,<br/>대구를 자세히.</h2><div className="scope-figures"><div><strong>{s.n}<small>개소</small></strong><span>대구 하수처리시설</span></div><div><strong>{fmt(n.n, 0)}<small>개소</small></strong><span>전국 비교 데이터</span></div></div><div className="scope-foot"><span><Check size={14}/>공식 2025 통계와 전수 대조</span><a href="#quality" aria-label="원본 검증 방법 보기"><ArrowUpRight size={17}/></a></div></section>
+    <div className="story-facts" aria-label="대구 하수처리시설 핵심 관측값">
+      <article><Database size={19}/><span>분석한 대구 시설</span><strong>{city.n}<small>개소</small></strong><p>전국 {fmt(national.n, 0)}개 중 대구 시설</p></article>
+      <article><FlaskConical size={19}/><span>연간 전력 사용</span><strong>{fmt(city.electricity_kwh / 1e6, 1)}<small>GWh</small></strong><p>시설별 관측 전력량 합계</p></article>
+      <article><ArrowUpRight size={19}/><span>전력 간접배출 추정</span><strong>{fmt(city.indirect_tco2e_est / 1000, 1)}<small>천 tCO₂eq</small></strong><p>공식 계수 환산 · 시설 전체 배출량 아님</p></article>
+      <article><Droplets size={19}/><span>수질을 함께 확인</span><strong>{fmt(city.median_bod_removal_pct, 1)}<small>%</small></strong><p>BOD 농도 제거율 중앙값 · 법정 판정 아님</p></article>
+    </div>
+    <p className="story-facts-source">{data.meta.year}년 · 한국환경공단 공공하수처리시설 현황 · 전력 간접배출에만 GIR 공식 전력배출계수 적용</p>
 
-      <section className="bento-card concentration-card" aria-labelledby="concentration-title"><div className="card-kicker"><span>KEY FINDING / 02</span><span>ANNUAL ELECTRICITY</span></div><h2 id="concentration-title">전력 사용은<br/>어디에 집중되는가.</h2><div className="concentration-stat"><strong>{fmt(share, 1)}<small>%</small></strong><p>전력 사용 상위 5개 시설의<br/>대구 전체 전력량 대비 비중</p></div><div className="share-bar" role="img" aria-label={`상위 5개 시설 ${fmt(share, 1)}%, 나머지 ${fmt(100 - share, 1)}%`}><span style={{ width: `${share}%` }}/></div><div className="share-caption"><span>상위 5개</span><span>나머지 {s.n - top.length}개</span></div><p className="mini-insight">전력 계측과 절감 가능성 조사는 이 5곳부터 시작하면 전체 사용량의 대부분을 살필 수 있습니다. 사용량이 크다고 비효율이라는 뜻은 아닙니다.</p><p className="data-stamp">{data.meta.year}년 · 한국환경공단 · 대구 총 {fmt(s.electricity_kwh / 1e6, 2)} GWh/년</p></section>
+    <div className="story-section-heading">
+      <span className="eyebrow">THREE THINGS THE DATA CHANGES</span>
+      <h2>숫자 하나로 시설을 줄 세우지 않는 이유</h2>
+      <p>처리 규모, 비슷한 시설, 제거한 오염량을 함께 보면 판단이 달라집니다.</p>
+    </div>
+    <div className="story-evidence-grid">
+      <article className="story-evidence story-evidence-wide">
+        <span className="story-card-number">01 / 도시 전체와 개별 시설</span>
+        <h3>도시 전체 수치가 낮아도<br/>모든 시설이 효율적인 것은 아닙니다.</h3>
+        <p className="story-chart-intro">하수 1m³를 처리하는 데 든 전력</p>
+        <div className="story-compare-bars" role="img" aria-label={'2025년 유입량 가중 전력 원단위 대구 ' + fmt(city.weighted_kwh_m3, 3) + ', 전국 ' + fmt(national.weighted_kwh_m3, 3) + ' kWh/m³'}>
+          {[{ label: '대구', value: city.weighted_kwh_m3 }, { label: '전국', value: national.weighted_kwh_m3 }].map(row =>
+            <div key={row.label}><span>{row.label}</span><i><b style={{ width: String(row.value / maxIntensity * 100) + '%' }} /></i><strong>{fmt(row.value, 3)}</strong></div>)}
+        </div>
+        <p className="story-card-meaning">대구 전체는 <b>{fmt(city.weighted_kwh_m3, 3)} kWh/m³</b>입니다. 시설 하나를 평가할 때는 규모·공법·오염부하가 비슷한 곳과 비교해야 합니다.</p>
+        <small>{data.meta.year}년 · 한국환경공단 · 전력 합계 ÷ 연간 환산 유입량 합계 · 전국과 대구의 시설 구성 차이 포함</small>
+      </article>
 
-      <Panel title="대구 주요 시설의 전력 원단위" subtitle={`${data.meta.year}년 · 대구 시설용량 500 m³/일 이상 ${major.length}개 · 유입량당 전력 kWh/m³`} className="bento-major" action={<button className="text-button" onClick={() => go('benchmark')}>상세 비교<ArrowUpRight size={16}/></button>}><FacilityBars rows={major}/><Takeaway source="2025년 · 한국환경공단 · kWh/m³">같은 양의 하수를 처리할 때 드는 전력을 비교합니다. 막대 차이는 추가 진단의 출발점이며 규모와 오염부하를 함께 봐야 합니다.</Takeaway></Panel>
+      {peer?.available && peerFacility && <article className="story-evidence">
+        <span className="story-card-number">02 / 비슷한 시설과 비교</span>
+        <h3>추가 진단이 필요한 곳은<br/>다르게 드러납니다.</h3>
+        <div className="story-peer-visual"><strong>{fmt(peer.ratio, 2)}<small>배</small></strong><span>{peerFacility.name}</span></div>
+        <div className="story-peer-baseline"><span>이 시설 {fmt(peerFacility.kwh_m3, 3)} kWh/m³</span><span>유사시설 중앙값 {fmt(peer.median_kwh_m3, 3)} kWh/m³</span></div>
+        <p className="story-card-meaning">전력 원단위가 타 지역 유사시설 {peer.count}개의 중앙값보다 높습니다. <b>절감 가능량이 아니라 현장 확인 순서의 단서</b>입니다.</p>
+        <button className="story-inline-link" onClick={() => onSelect(peerFacility)}>비교집단 확인 <ArrowUpRight size={15}/></button>
+        <small>{data.meta.year}년 · 한국환경공단 · kWh/m³ · 공법·규모·BOD 부하를 맞춘 비교</small>
+      </article>}
 
-      <section className="bento-card water-card" aria-labelledby="water-title"><div className="card-kicker"><span>WATER QUALITY</span><Droplets size={20}/></div><h2 id="water-title">에너지를 읽을 때,<br/>정화 성능도 함께.</h2><div className="water-value">{fmt(s.median_bod_removal_pct, 1)}<small>%</small></div><p className="water-value-caption">대구 BOD 농도 제거율 중앙값</p><div className="water-notes"><p>수질 성능을 유지하는 조건에서<br/>에너지 개선의 여지를 살펴봅니다.</p><p>농도 제거율은 법정 방류수 기준<br/>충족 여부와 구분해야 합니다.</p></div><p className="data-stamp">{data.meta.year}년 · 한국환경공단 · 유입·방류 BOD 기반</p></section>
-
-      <Panel title="전국의 분포 안에서 대구의 위치를 읽다" subtitle={`${data.meta.year}년 · 일평균 유입량 m³/일 × 전력 원단위 kWh/m³ · 양축 로그`} className="bento-distribution"><div className="chart-legend"><span><i className="dot national"/>전국 타 지역</span><span><i className="dot daegu"/>대구</span></div><BenchmarkScatter national={data.national.filter(f => f.region !== '대구광역시' && f.benchmark_eligible)} daegu={data.facilities.filter(f => f.benchmark_eligible)}/><Takeaway source="2025년 · 한국환경공단 · 유입량 m³/일, 전력 원단위 kWh/m³">청록색 대구 점을 비슷한 유입량의 회색 점들과 비교하세요. 전국 전체 평균과의 차이보다 같은 규모 안에서의 위치가 더 유용합니다.</Takeaway></Panel>
-
-      <aside className="bento-card research-reading"><div className="card-kicker"><span>HOW TO READ THIS STUDY</span><span>↘</span></div><h2>비교의 기준을<br/>먼저 확인하세요.</h2><p>같은 공법, 유사한 규모와 BOD 부하.<br/>비교 조건을 만족할 때만<br/>상대 효율을 제시합니다.</p><dl><div><dt>유사시설 비교 가능</dt><dd>{compared}<small> / {s.n}개</small></dd></div><div><dt>동일 시설 전년 비교</dt><dd>{data.trends.length}<small>개</small></dd></div><div><dt>주소 기반 추정 지도점</dt><dd>{data.quality.coordinates_estimated_n}<small>개</small></dd></div></dl><button className="text-button" onClick={() => go('quality')}>출처와 분석 한계 읽기<ArrowRight size={17}/></button></aside>
+      {rankFacility && <article className="story-evidence">
+        <span className="story-card-number">03 / 무엇을 처리했는가</span>
+        <h3>물의 양만 보면<br/>순위가 달라집니다.</h3>
+        <div className="story-rank-visual"><div><span>하수 1m³당 전력</span><strong>{fmt(rankFacility.rank_volume, 0)}위</strong></div><ArrowRight size={27}/><div><span>BOD 1kg 제거당 전력</span><strong>{fmt(rankFacility.rank_bod, 0)}위</strong></div></div>
+        <p className="story-card-meaning">{rankFacility.name}은 두 기준에서 다른 위치에 있습니다. <b>유량과 오염물질 제거량을 함께 공개</b>해야 하는 이유입니다.</p>
+        <button className="story-inline-link" onClick={() => onSelect(rankFacility)}>시설 수치 확인 <ArrowUpRight size={15}/></button>
+        <small>{data.meta.year}년 · 대구 {city.n}개 시설 내 순위 · BOD 제거 질량은 연평균 농도·유량 기반 근사</small>
+      </article>}
     </div>
 
-    <div className="editorial-section-heading"><span className="eyebrow">RESEARCH FINDINGS</span><h2>숫자가 가리키는 세 가지 질문</h2><p>데이터의 관찰에서 현장 진단의 질문으로 이어갑니다.</p></div>
-    <div className="findings-grid">{data.insights.slice(1, 4).map((x, i) => <button key={x.title} className="finding-card" onClick={() => go('policy')}><span className="finding-card-top"><span>0{i + 1}</span><ArrowUpRight size={20}/></span><strong>{x.value}<small>{x.unit}</small></strong><h3>{x.title}</h3><p>{x.finding}</p><span className="data-stamp">{x.year}년 · 한국환경공단 · 정책 제안에서 근거 확인</span></button>)}</div>
+    <section className="story-action" aria-labelledby="story-action-title">
+      <div><span className="eyebrow">WHAT DAEGU CAN TEST NEXT</span><h2 id="story-action-title">계측하고, 원인을 확인하고,<br/>수질을 지키며 실증합니다.</h2><p>전력 절감은 공정별 계측과 방류수질 검증이 함께 이뤄질 때 정책 성과로 평가할 수 있습니다.</p><button className="button secondary" onClick={() => go('policy')}>3단계 실행 제안 <ArrowRight size={16}/></button></div>
+      <div className="story-scenario"><span>만약 대구 전력의 10%를 줄인다면</span><strong>{fmt(scenario.carbon, 0)}<small>tCO₂eq/년</small></strong><p>{fmt(scenario.saving / 1e6, 2)} GWh/년의 전력 절감에 공식 계수를 곱한 값입니다.</p><b>가정 시나리오 · 실증된 감축량 아님</b><button className="story-inline-link" onClick={() => go('carbon')}>절감률 바꿔 보기 <ArrowUpRight size={15}/></button></div>
+    </section>
 
-    <Panel title="전력 사용 상위 시설의 운영 지표" subtitle={`${data.meta.year}년 · 대구 · 총량 순서는 비효율 순위가 아닙니다`} action={<DownloadLink file="daegu_2025.csv"/>}><Takeaway>위의 {fmt(share, 1)}%가 어떤 시설에서 나오는지 확인할 수 있습니다. 전력 총량은 시설 크기의 영향이 크므로 원단위와 BOD 제거율을 함께 읽으세요.</Takeaway><details className="data-details"><summary>상위 5개 시설의 상세 수치 보기</summary><FacilityTable rows={top} data={data} onSelect={onSelect} compact/></details></Panel>
-    <div className="overview-report"><FileText size={25}/><div><span className="eyebrow">OPEN RESEARCH</span><h2>발견의 근거를, 누구나 확인할 수 있도록.</h2><p>계산식·검증 절차·정책적 한계를 보고서와 원본 기록에 함께 담았습니다.</p></div><a className="button primary" href="/downloads/ANALYSIS_REPORT.md" download>연구보고서 받기<ArrowUpRight size={16}/></a></div>
+    <section className="story-method" aria-labelledby="story-method-title"><div><span className="eyebrow">PUBLIC DATA + AI</span><h2 id="story-method-title">이 결론은 어떻게 만들었나</h2><p>공공데이터에서 관측값을 확보하고, AI는 전력 차이에 관련된 조건을 탐색하는 데 사용했습니다.</p></div><ol><li><b>01</b><strong>공식 자료 수집</strong><span>전국 {fmt(national.n, 0)}개 · 대구 {city.n}개 시설</span></li><li><b>02</b><strong>조건을 맞춰 비교</strong><span>규모·공법·BOD 부하와 수질을 함께 확인</span></li><li><b>03</b><strong>AI로 패턴 점검</strong><span>타 지역 {fmt(data.model.train_n, 0)}개 학습 · 대구 {data.model.daegu_n}개 독립 평가</span></li></ol><button className="story-inline-link" onClick={() => go('ai')}>AI 분석 근거 보기 <ArrowUpRight size={15}/></button></section>
     <Source data={data}/>
   </>;
 }
