@@ -14,6 +14,10 @@ def table(headers, rows):
 
 def write_reports(data, manifest):
     q = data['quality']; dg = data['summary']['daegu']; ns = data['summary']['national']; m = data['model']
+    top_five_share = sum(
+        row.get('electricity_kwh') or 0
+        for row in sorted(data['facilities'], key=lambda row: row.get('electricity_kwh') or 0, reverse=True)[:5]
+    ) / dg['electricity_kwh'] * 100
     reports = {}
     reports['DATA_SOURCES.md'] = f'''# 공공데이터 출처 및 활용 내역
 
@@ -309,6 +313,13 @@ AI는 수집·분석 코드 작성과 서술을 보조했다. 원본 관측값�
 핵심 질문은 전력이 어디에 집중되며, 수질을 유지하면서 어떤 시설과 공정을 먼저 진단해야 하는가이다.
 React + TypeScript + Vite + Tailwind + Recharts + Leaflet, Python/Pandas/NumPy/Scikit-learn/GeoPandas/XGBoost/SHAP.
 
+## 이 프로젝트가 말하는 것
+
+2025년 대구 하수처리시설 {dg['n']}곳의 전력 사용량 중 상위 5곳이 {top_five_share:.1f}%를 차지한다.
+이는 **전력이 모인 위치**를 보여줄 뿐, 5곳이 비효율적이거나 그만큼 절감할 수 있다는 뜻은 아니다.
+제안하는 순서는 **큰 시설의 공정별 전력 계측 → 유사시설과 비교해 차이의 원인 확인 → 방류수질을 유지하는 절감 실험**이다.
+사이트 첫 화면은 이 결론과 근거를 먼저 보여주고, 상세 자료는 각 화면에서 확인할 수 있다.
+
 ## 실행
 
 Python 3.14, Node 24에서 검증했다. 패키지 가용성이 다른 환경은 requirements 설치 결과를 확인한다.
@@ -363,7 +374,10 @@ Vercel: 프레임워크 Vite, 빌드 `npm run build`, 출력 `dist`. `vercel.jso
 
 ## 기능과 해석
 
-핵심 발견 → 시설 찾기 → 전국 비교 → AI 분석 → 탄소 계산 → 실행 제안의 6개 화면이다.
+화면은 질문과 결론 → 시설 찾기 → 전국과 비교 → AI로 살펴보기 → 탄소 계산 → 실행 제안 순서다.
+첫 화면의 90.8%는 전력 집중도다. 시설 지도에서 위치와 운영 지표를 확인하고, 전국 비교 화면에서 규모·공법·오염부하가 비슷한 시설과 효율을 비교한다.
+AI 화면은 전력 차이와 관련된 예측 변수와 오차를 보여준다. 탄소 화면은 사용자가 설정한 절감률의 **가정상** 간접배출 감소량을 계산한다.
+실행 제안은 계측·원인 확인·수질 유지 실증을 연결한다.
 전국 비교와 대구 분석, 관측·근사·AI·가정 시나리오를 구분한다. 모든 결과는 2025년이며 전년 비교만 2024년을 별도 표시한다.
 지도는 2025년 시설 주소를 2026년 SGIS 기반 행정경계의 구역 내부 대표점 또는 OSM 동·도로 객체에 연결한
 추정 위치를 표시한다. 이 점은 시설 필지·건물 좌표가 아니다. 공식 좌표는 아직 {q['coordinates_verified_n']}개이며,
